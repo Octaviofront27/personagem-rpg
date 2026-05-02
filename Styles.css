@@ -7,8 +7,8 @@
 }
 
 body {
-    background: #66686b;
-    color: aliceblue;   
+    background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+    color: #ffffff;
     font-size: 16px;
     overflow: hidden;
 }
@@ -25,10 +25,26 @@ header {
 }
 
 .logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
     font-family: "MedievalSharp", cursive;
-    font-size: 20px;
+    font-size: 24px;
     font-weight: 900;
-    color: #000000;
+    color: #ffffff;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+}
+
+.logo-img {
+    width: 40px;
+    height: 40px;
+    object-fit: contain;
+    filter: drop-shadow(0 0 8px rgba(255, 100, 0, 0.6));
+    transition: transform 0.3s ease;
+}
+
+.logo-img:hover {
+    transform: scale(1.1);
 }
 
 header nav ul {
@@ -49,8 +65,8 @@ header nav ul li::after {
     bottom: 0;
     width: 0%;
     height: 2px;
-    background-color: hsl(0, 0%, 0%);
-    transition: width 0.03s ease;
+    background-color: #ff6b35;
+    transition: width 0.3s ease;
 }
 
 header nav ul li:hover:after {
@@ -61,20 +77,26 @@ header nav ul li:hover:after {
 .container {
     height: 100vh;
     position: relative;
-    background: linear-gradient(135deg, #f6f7f8 0%, #2c2e9b 100%);
+    background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+    overflow: hidden;
 }
 
 .container::before {
     content: "";
     position: absolute;
-    width: 500px;
-    height: 500px;
+    width: 600px;
+    height: 600px;
     border-radius: 50%;
-    background: linear-gradient(circle, #f6f7f8 0%, #2c2e9b 100%);
+    background: radial-gradient(circle, rgba(255, 100, 0, 0.1) 0%, rgba(255, 255, 255, 0.05) 50%, transparent 100%);
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    animation: pulse 4s ease-in-out infinite;
+}
 
+@keyframes pulse {
+    0%, 100% { transform: translate(-50%, -50%) scale(1); opacity: 0.3; }
+    50% { transform: translate(-50%, -50%) scale(1.1); opacity: 0.6; }
 }
 
 .list {
@@ -92,16 +114,16 @@ header nav ul li:hover:after {
     justify-content: center;
     align-items: center;
     opacity: 0;
-    
-    transform: translateX(100vw);
-    transition: transform 0.5s ease, opacity 0.5s ease;
+    pointer-events: none;
+    transition: opacity 0.8s ease-in-out, transform 0.8s ease-in-out;
+    transform: scale(0.95);
 }
 
 .active {
     opacity: 1;
-    transform: translateX(0);
-    transform: scale(1.1);
-    box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+    pointer-events: all;
+    transform: scale(1);
+    z-index: 2;
 }
 
 .product-img {
@@ -130,40 +152,51 @@ header nav ul li:hover:after {
 
 .product-tag {
     font-size: 14px;
-    color: #000000;
+    color: #ff6b35;
     font-weight: 600;
     margin-bottom: 10px;
     text-transform: uppercase;
+    letter-spacing: 1px;
 }
 
 .product-name {
     font-size: 48px;
-    color: #000000;
+    color: #ffffff;
     font-weight: 900;
     margin-bottom: 20px;
     font-family: "MedievalSharp", cursive;
     line-height: 1;
+    text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.7);
 }
 
 .description {
     font-size: 16px;
-    color: #000000;
-    line-height: 1.5;
+    color: #e0e0e0;
+    line-height: 1.6;
     max-width: 400px;
     margin-bottom: 30px;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
 }
 
 .btn {
-    padding: 12px 10px;
-    background: linear-gradient(90deg, #66686b, #000000);
-    color: #fff;
+    padding: 12px 24px;
+    background: linear-gradient(135deg, #ff6b35 0%, #f7931e 100%);
+    color: #ffffff;
     border-radius: 30px;
     cursor: pointer;
     font-size: 16px;
     font-weight: 600;
     text-decoration: none;
     display: inline-block;
-    transition: background-color 0.3s ease;
+    transition: all 0.3s ease;
+    border: none;
+    box-shadow: 0 4px 15px rgba(255, 107, 53, 0.3);
+}
+
+.btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(255, 107, 53, 0.4);
+    background: linear-gradient(135deg, #f7931e 0%, #ff6b35 100%);
 }
 
 .arrows {
@@ -174,14 +207,16 @@ header nav ul li:hover:after {
     top: 50%;   
     left: 50%;
     transform: translate(-50%, -50%);
+    z-index: 10;
+    pointer-events: all;
 }
 
 .arrow-btn {
     width: 50px;
     height: 50px;
     background-color: rgba(255, 255, 255, 0.1);
-    border: 2px solid rgba(0, 247, 255, 0.3);
-    color: #fff;
+    border: 2px solid rgba(255, 107, 53, 0.3);
+    color: #ffffff;
     border-radius: 50%;
     display: flex;
     justify-content: center;
@@ -189,12 +224,41 @@ header nav ul li:hover:after {
     cursor: pointer;
     font-size: 20px;
     font-weight: 600;
-    transition: background-color 0.3s ease;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
 }
 
 .arrow-btn:hover {
-    background-color: rgba(0, 247, 255, 0.2);
-    border-color: #00f7ff;
+    background-color: rgba(255, 107, 53, 0.3);
+    border-color: #ff6b35;
+    transform: scale(1.1);
+    box-shadow: 0 0 20px rgba(255, 107, 53, 0.5);
+}
+
+.arrow-btn:active {
+    transform: scale(0.95);
+    background-color: rgba(255, 107, 53, 0.5);
+    box-shadow: 0 0 30px rgba(255, 107, 53, 0.7);
+}
+
+/* Efeito de onda no clique */
+.arrow-btn::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.5);
+    transform: translate(-50%, -50%);
+    transition: width 0.6s, height 0.6s;
+}
+
+.arrow-btn:active::after {
+    width: 100px;
+    height: 100px;
 }
 
 .indicators {
@@ -207,14 +271,13 @@ header nav ul li:hover:after {
     align-items: center;
 }
 
-.number {
+.numbers {
     font-family: "MedievalSharp", cursive;
-    font-size: 14px;
+    font-size: 18px;
     font-weight: 800;
-    color: #000000;
-    display: flex;
-    gap: 10px;
-    margin-top: 10px;
+    color: #ffffff;
+    margin-bottom: 10px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
 }
 
 .dots {
@@ -232,8 +295,8 @@ header nav ul li:hover:after {
 }
 
 .dot.active {
-    background-color: #000000;
-    box-shadow: 0 0 10px rgba(0, 247, 255, 0.5);
+    background-color: #ff6b35;
+    box-shadow: 0 0 10px rgba(255, 107, 53, 0.6);
 }
 
 .Appearance-img {
@@ -246,10 +309,64 @@ header nav ul li:hover:after {
     gap: 40px;
 }
 
+/* Estilos para links de navegação */
+header nav ul li a {
+    color: #ffffff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+header nav ul li a:hover {
+    color: #ff6b35;
+}
+
+header nav ul li a.active-nav {
+    color: #ff6b35;
+    font-weight: 600;
+}
+
+/* Estilos para logo como link */
+.logo a {
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+}
+
+/* Estilos para páginas de conteúdo */
+.content-page {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    text-align: center;
+    padding: 20px;
+}
+
+.content-page h1 {
+    font-family: "MedievalSharp", cursive;
+    font-size: 48px;
+    color: #ffffff;
+    text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.7);
+    margin-bottom: 20px;
+}
+
+.content-page p {
+    font-size: 18px;
+    color: #e0e0e0;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
 .Appearance-img img {
     width: 280px;
     height: 380px;
     object-fit: contain;
     border-radius: 10px;
+    transition: transform 0.8s ease-in-out, filter 0.8s ease-in-out;
+}
+
+.active .Appearance-img img {
+    transform: scale(1.05);
+    filter: drop-shadow(0 0 20px rgba(255, 107, 53, 0.3));
 }
 
