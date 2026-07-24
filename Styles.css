@@ -50,7 +50,8 @@ header {
 
 header nav ul {
     display: flex;
-    gap: 40px;
+    flex-wrap: wrap;
+    gap: 16px 40px;
 }
 
 header nav ul li {
@@ -319,6 +320,18 @@ header nav ul li a.active-nav {
     display: block;
 }
 
+.hero-image img[src*="hero-biologico"] {
+    object-position: center;
+}
+
+.hero-image img[src*="hero-invocacoes"] {
+    object-position: center;
+}
+
+.hero-image img[src*="hero-pets"] {
+    object-position: 60% 55%;
+}
+
 .hero-text {
     position: absolute;
     top: 50%;
@@ -349,7 +362,9 @@ header nav ul li a.active-nav {
 .page-content {
     position: relative;
     z-index: 1;
-    background: linear-gradient(135deg, #060605 0%, #100e0a 50%, #1a150c 100%);
+    background: rgba(8, 7, 5, 0.72);
+    backdrop-filter: blur(22px);
+    -webkit-backdrop-filter: blur(22px);
 }
 
 .hero.page-hero + .page-content {
@@ -443,7 +458,7 @@ header nav ul li a.active-nav {
     }
 
     header nav ul {
-        gap: 20px;
+        gap: 10px 20px;
     }
 }
 
