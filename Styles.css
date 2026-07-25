@@ -1,3 +1,36 @@
+/* Variáveis do tema de cores: paleta padrão (dia) — dourado sobre fundo quase preto */
+:root {
+    --accent: #d4af37;
+    --accent-rgb: 212, 175, 55;
+    --accent-light: #f0d68a;
+    --bg-1: #060605;
+    --bg-2: #100e0a;
+    --bg-3: #1a150c;
+    --bg-1-rgb: 6, 5, 5;
+    --text-primary: #ffffff;
+    --text-secondary: #e0e0e0;
+    --card-tint: rgba(255, 255, 255, 0.05);
+    --sub-item-bg: rgba(0, 0, 0, 0.2);
+    --overlay-bg: rgba(8, 7, 5, 0.72);
+}
+
+/* Sobrescrita do tema noturno: ativado via [data-theme="night"] no <html>, troca para prateado azulado sobre branco */
+:root[data-theme="night"] {
+    --accent: #9fb8d9;
+    --accent-rgb: 159, 184, 217;
+    --accent-light: #e3ecf7;
+    --bg-1: #f7f8fa;
+    --bg-2: #eceff3;
+    --bg-3: #dfe4ec;
+    --bg-1-rgb: 247, 248, 250;
+    --text-primary: #14181f;
+    --text-secondary: #3a4250;
+    --card-tint: rgba(20, 24, 31, 0.05);
+    --sub-item-bg: rgba(20, 24, 31, 0.06);
+    --overlay-bg: rgba(247, 248, 250, 0.72);
+}
+
+/* Reset global */
 * {
     margin: 0;
     padding: 0;
@@ -6,12 +39,15 @@
     font-family: "Montserrat", sans-serif;
 }
 
+/* Cor base do texto da página, reage às mudanças de tema */
 body {
-    color: #ffffff;
+    color: var(--text-primary);
     font-size: 16px;
     overflow: hidden;
+    transition: color 0.3s ease;
 }
 
+/* Cabeçalho fixo do site com fundo fosco para o texto do menu continuar legível sobre qualquer imagem ou conteúdo atrás */
 header {
     position: fixed;
     width: 100vw;
@@ -23,8 +59,13 @@ header {
     align-items: center;
     row-gap: 10px;
     z-index: 3;
+    background: rgba(var(--bg-1-rgb), 0.35);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    transition: background 0.3s ease;
 }
 
+/* Bloco do logo/título do site no cabeçalho */
 .logo {
     display: flex;
     align-items: center;
@@ -32,15 +73,16 @@ header {
     font-family: "MedievalSharp", cursive;
     font-size: 24px;
     font-weight: 900;
-    color: #ffffff;
+    color: var(--text-primary);
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
 }
 
+/* Brilho do ícone do logo + animação ao passar o mouse */
 .logo-img {
     width: 40px;
     height: 40px;
     object-fit: contain;
-    filter: drop-shadow(0 0 8px rgba(212, 175, 55, 0.6));
+    filter: drop-shadow(0 0 8px rgba(var(--accent-rgb), 0.6));
     transition: transform 0.3s ease;
 }
 
@@ -48,6 +90,7 @@ header {
     transform: scale(1.1);
 }
 
+/* Layout do menu de navegação (quebra para uma segunda linha se não couber, ex: no mobile) */
 header nav ul {
     display: flex;
     flex-wrap: wrap;
@@ -58,8 +101,10 @@ header nav ul li {
     cursor: pointer;
     position: relative;
     padding: 5px 0;
-    
+
 }
+
+/* Sublinhado animado que se expande sob o link do menu ao passar o mouse */
 header nav ul li::after {
     content: "";
     position: absolute;
@@ -67,7 +112,7 @@ header nav ul li::after {
     bottom: 0;
     width: 0%;
     height: 2px;
-    background-color: #d4af37;
+    background-color: var(--accent);
     transition: width 0.3s ease;
 }
 
@@ -76,37 +121,74 @@ header nav ul li:hover:after {
 
 }
 
+/* Botão de alternância dia/noite (botão circular de ícone no cabeçalho) */
+.theme-toggle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 1px solid rgba(var(--accent-rgb), 0.35);
+    background: rgba(var(--bg-1-rgb), 0.4);
+    color: var(--text-primary);
+    cursor: pointer;
+    transition: border-color 0.3s ease, color 0.3s ease, transform 0.2s ease;
+    flex-shrink: 0;
+}
+
+.theme-toggle:hover {
+    border-color: var(--accent);
+    color: var(--accent);
+    transform: scale(1.08);
+}
+
+/* Alterna qual ícone (sol/lua) fica visível de acordo com o tema ativo */
+.theme-toggle .icon-moon {
+    display: none;
+}
+
+:root[data-theme="night"] .theme-toggle .icon-sun {
+    display: none;
+}
+
+:root[data-theme="night"] .theme-toggle .icon-moon {
+    display: block;
+}
+
+/* Gradiente de fundo principal da página, usado como camada base atrás da imagem fixa */
 .container {
     height: 100vh;
     position: relative;
-    background: linear-gradient(135deg, #060605 0%, #100e0a 50%, #1a150c 100%);
+    background: linear-gradient(135deg, var(--bg-1) 0%, var(--bg-2) 50%, var(--bg-3) 100%);
     overflow: hidden;
+    transition: background 0.3s ease;
 }
 
-/* Estilos para links de navegação */
+/* Cores dos links do menu */
 header nav ul li a {
-    color: #ffffff;
+    color: var(--text-primary);
     text-decoration: none;
     transition: color 0.3s ease;
 }
 
 header nav ul li a:hover {
-    color: #d4af37;
+    color: var(--accent);
 }
 
 header nav ul li a.active-nav {
-    color: #d4af37;
+    color: var(--accent);
     font-weight: 600;
 }
 
-/* Estilos para logo como link */
+/* Logo funciona como link de volta para a página inicial */
 .logo a {
     text-decoration: none;
     display: flex;
     align-items: center;
 }
 
-/* Estilos para páginas de conteúdo */
+/* Layout centralizado usado por páginas ainda sem conteúdo completo (ex: Pets) */
 .content-page {
     display: flex;
     flex-direction: column;
@@ -120,20 +202,21 @@ header nav ul li a.active-nav {
 .content-page h1 {
     font-family: "MedievalSharp", cursive;
     font-size: 48px;
-    color: #ffffff;
+    color: var(--text-primary);
     text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.7);
     margin-bottom: 20px;
 }
 
 .content-page p {
     font-size: 18px;
-    color: #e0e0e0;
+    color: var(--text-secondary);
     text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
 }
 
+/* Caixa de card estilo "Em breve" */
 .placeholder-card {
-    background: rgba(255, 255, 255, 0.05);
-    border: 1px solid rgba(212, 175, 55, 0.3);
+    background: var(--card-tint);
+    border: 1px solid rgba(var(--accent-rgb), 0.3);
     border-radius: 16px;
     padding: 50px 60px;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
@@ -143,25 +226,28 @@ header nav ul li a.active-nav {
     display: block;
     font-size: 48px;
     margin-bottom: 16px;
-    filter: drop-shadow(0 0 12px rgba(212, 175, 55, 0.5));
+    filter: drop-shadow(0 0 12px rgba(var(--accent-rgb), 0.5));
 }
 
-/* Página de Itens */
+/* Permite que páginas de conteúdo longas (Itens, Biológico, etc.) rolem dentro do container de altura fixa */
 .container.scrollable {
     overflow-y: auto;
     overflow-x: hidden;
 }
 
+/* Container de conteúdo das páginas de listagem (itens/habilidades/poderes) */
 .items-page {
     max-width: 900px;
     margin: 0 auto;
     padding: 60px 20px;
 }
 
+/* Variante mais baixa do banner hero usada no topo das páginas de conteúdo (diferente da hero de altura total da landing) */
 .page-hero .hero-image {
     height: 50vh;
 }
 
+/* Gradiente escuro atrás do título do banner para continuar legível independente da imagem */
 .page-hero::after {
     content: "";
     position: absolute;
@@ -185,6 +271,7 @@ header nav ul li a.active-nav {
     font-size: 38px;
 }
 
+/* Mobile: reduz o banner do page-hero e reposiciona título/espaçamento */
 @media (max-width: 768px) {
     .page-hero .hero-image {
         height: 38vh;
@@ -213,14 +300,16 @@ header nav ul li a.active-nav {
     margin-bottom: 40px;
 }
 
+/* Card de uma entrada (item/habilidade/poder) */
 .item-package {
-    background: rgba(255, 255, 255, 0.05);
-    border: 1px solid rgba(212, 175, 55, 0.3);
+    background: var(--card-tint);
+    border: 1px solid rgba(var(--accent-rgb), 0.3);
     border-radius: 16px;
     padding: 30px;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
 }
 
+/* Cabeçalho/título do card e texto de descrição */
 .package-header {
     display: flex;
     align-items: baseline;
@@ -232,28 +321,29 @@ header nav ul li a.active-nav {
 .package-title {
     font-family: "MedievalSharp", cursive;
     font-size: 28px;
-    color: #ffffff;
+    color: var(--text-primary);
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
 }
 
 .package-owner {
     font-size: 16px;
-    color: #d4af37;
+    color: var(--accent);
     font-weight: 600;
 }
 
 .package-description {
-    color: #e0e0e0;
+    color: var(--text-secondary);
     line-height: 1.6;
     margin-bottom: 16px;
 }
 
 .package-bonus {
-    color: #d4af37;
+    color: var(--accent);
     font-weight: 600;
     margin-bottom: 28px;
 }
 
+/* Subseções dentro de um card (formas alternativas, técnicas nomeadas, etc.) */
 .package-contents {
     display: flex;
     flex-direction: column;
@@ -261,8 +351,8 @@ header nav ul li a.active-nav {
 }
 
 .sub-item {
-    background: rgba(0, 0, 0, 0.2);
-    border-left: 3px solid #d4af37;
+    background: var(--sub-item-bg);
+    border-left: 3px solid var(--accent);
     border-radius: 8px;
     padding: 16px 20px;
 }
@@ -270,25 +360,26 @@ header nav ul li a.active-nav {
 .sub-item h3 {
     font-family: "MedievalSharp", cursive;
     font-size: 20px;
-    color: #d4af37;
+    color: var(--accent);
     margin-bottom: 8px;
 }
 
 .sub-item p {
-    color: #e0e0e0;
+    color: var(--text-secondary);
     line-height: 1.6;
     font-size: 15px;
 }
 
 .sub-item.featured {
-    border-left-color: #f0d68a;
-    box-shadow: 0 0 20px rgba(212, 175, 55, 0.2);
+    border-left-color: var(--accent-light);
+    box-shadow: 0 0 20px rgba(var(--accent-rgb), 0.2);
 }
 
 .note-marker {
-    color: #f0d68a;
+    color: var(--accent-light);
 }
 
+/* Imagem hero fixa em tela cheia: permanece presa na tela enquanto o conteúdo rola por cima */
 .hero {
     position: fixed;
     top: 0;
@@ -297,6 +388,7 @@ header nav ul li a.active-nav {
     z-index: 0;
 }
 
+/* Escurece o lado direito da imagem hero para o título sobreposto continuar legível */
 .hero::after {
     content: "";
     position: absolute;
@@ -320,6 +412,7 @@ header nav ul li a.active-nav {
     display: block;
 }
 
+/* Ajustes de ponto focal por imagem, já que cada foto hero enquadra o assunto de um jeito diferente */
 .hero-image img[src*="hero-biologico"] {
     object-position: center;
 }
@@ -341,9 +434,10 @@ header nav ul li a.active-nav {
     z-index: 2;
 }
 
+/* Texto sobreposto direto na foto hero — sempre claro/branco, independente do tema dia/noite do site */
 .hero-epithet {
     font-size: 14px;
-    color: #d4af37;
+    color: var(--accent);
     font-weight: 600;
     text-transform: uppercase;
     letter-spacing: 2px;
@@ -359,14 +453,17 @@ header nav ul li a.active-nav {
     text-shadow: 3px 3px 8px rgba(0, 0, 0, 0.9);
 }
 
+/* Painel de vidro fosco que desliza sobre a imagem hero fixa ao rolar a página (borra + tinge a imagem atrás) */
 .page-content {
     position: relative;
     z-index: 1;
-    background: rgba(8, 7, 5, 0.72);
+    background: var(--overlay-bg);
     backdrop-filter: blur(22px);
     -webkit-backdrop-filter: blur(22px);
+    transition: background 0.3s ease;
 }
 
+/* Empurra o page-content pra baixo para começar logo abaixo da hero correspondente, usando a altura de cada variante */
 .hero.page-hero + .page-content {
     margin-top: 50vh;
 }
@@ -375,6 +472,7 @@ header nav ul li a.active-nav {
     margin-top: 100vh;
 }
 
+/* Layout do texto de bio e da ficha rápida da landing */
 .bio-section {
     max-width: 720px;
     margin: 0 auto;
@@ -384,7 +482,7 @@ header nav ul li a.active-nav {
 .bio-text {
     font-size: 17px;
     line-height: 1.8;
-    color: #e0e0e0;
+    color: var(--text-secondary);
     text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
     margin-bottom: 48px;
 }
@@ -398,8 +496,8 @@ header nav ul li a.active-nav {
 .fact-card {
     flex: 1;
     min-width: 220px;
-    background: rgba(255, 255, 255, 0.05);
-    border: 1px solid rgba(212, 175, 55, 0.3);
+    background: var(--card-tint);
+    border: 1px solid rgba(var(--accent-rgb), 0.3);
     border-radius: 12px;
     padding: 18px 22px;
 }
@@ -407,7 +505,7 @@ header nav ul li a.active-nav {
 .fact-label {
     display: block;
     font-size: 12px;
-    color: #d4af37;
+    color: var(--accent);
     font-weight: 600;
     text-transform: uppercase;
     letter-spacing: 1px;
@@ -416,10 +514,11 @@ header nav ul li a.active-nav {
 
 .fact-value {
     font-size: 15px;
-    color: #e0e0e0;
+    color: var(--text-secondary);
     line-height: 1.5;
 }
 
+/* Mobile: reduz a hero da landing, empilha o título abaixo da imagem e ajusta o deslocamento do page-content */
 @media (max-width: 768px) {
     .hero-image {
         height: 60vh;
@@ -442,6 +541,7 @@ header nav ul li a.active-nav {
     }
 }
 
+/* Telas pequenas: aperta o espaçamento do cabeçalho para caber logo, menu e botão de tema */
 @media (max-width: 480px) {
     header {
         padding: 16px 20px;
@@ -460,5 +560,9 @@ header nav ul li a.active-nav {
     header nav ul {
         gap: 10px 20px;
     }
-}
 
+    .theme-toggle {
+        width: 34px;
+        height: 34px;
+    }
+}
