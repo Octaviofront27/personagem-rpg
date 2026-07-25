@@ -55,7 +55,7 @@ header {
     position: fixed;
     width: 100vw;
     top: 0;
-    padding: 20px 50px;
+    padding: 20px 110px 20px 50px;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
@@ -608,6 +608,19 @@ header nav ul li a.active-nav {
     }
 }
 
+/* Encolhe o menu a partir de telas tipo tablet, pra nao quebrar linha e nao inchar o cabecalho (que empurraria o desfoque sobre a imagem) */
+@media (max-width: 768px) {
+    header nav ul {
+        gap: 4px 10px;
+        flex-wrap: nowrap;
+    }
+
+    header nav ul li a {
+        font-size: 12px;
+        white-space: nowrap;
+    }
+}
+
 /* Telas pequenas: aperta o cabeçalho e encolhe o menu pra caber tudo numa linha só */
 @media (max-width: 480px) {
     header {
@@ -624,14 +637,8 @@ header nav ul li a.active-nav {
         height: 32px;
     }
 
-    header nav ul {
-        gap: 4px 10px;
-        flex-wrap: nowrap;
-    }
-
     header nav ul li a {
         font-size: 11px;
-        white-space: nowrap;
     }
 
     /* Botão de tema vira flutuante no canto inferior esquerdo, sempre acessível mesmo rolando a página */
