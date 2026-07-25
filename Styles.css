@@ -128,7 +128,9 @@ header nav ul li:hover:after {
 
 }
 
-/* Botão de alternância dia/noite (botão circular de ícone no cabeçalho) — ícone sempre claro, como o resto do cabeçalho */
+/* Botão de alternância dia/noite — fica FORA do header no HTML de propósito: o header tem backdrop-filter, e um
+   elemento fixed dentro dele passaria a se posicionar em relação ao header em vez da tela toda. Como é fixed e
+   sozinho, posicionamos manualmente no canto onde o header o desenharia (topo direito) no desktop. */
 .theme-toggle {
     display: flex;
     align-items: center;
@@ -141,7 +143,10 @@ header nav ul li:hover:after {
     color: #ffffff;
     cursor: pointer;
     transition: border-color 0.3s ease, color 0.3s ease, transform 0.2s ease;
-    flex-shrink: 0;
+    position: fixed;
+    top: 22px;
+    right: 50px;
+    z-index: 4;
 }
 
 .theme-toggle:hover {
@@ -603,10 +608,10 @@ header nav ul li a.active-nav {
     }
 }
 
-/* Telas pequenas: aperta o espaçamento do cabeçalho para caber logo, menu e botão de tema */
+/* Telas pequenas: aperta o cabeçalho e encolhe o menu pra caber tudo numa linha só */
 @media (max-width: 480px) {
     header {
-        padding: 16px 20px;
+        padding: 14px 16px;
     }
 
     .logo {
@@ -620,11 +625,21 @@ header nav ul li a.active-nav {
     }
 
     header nav ul {
-        gap: 10px 20px;
+        gap: 4px 10px;
+        flex-wrap: nowrap;
     }
 
+    header nav ul li a {
+        font-size: 11px;
+        white-space: nowrap;
+    }
+
+    /* Botão de tema vira flutuante no canto inferior esquerdo, sempre acessível mesmo rolando a página */
     .theme-toggle {
-        width: 34px;
-        height: 34px;
+        top: auto;
+        right: auto;
+        bottom: 16px;
+        left: 16px;
+        z-index: 10;
     }
 }
