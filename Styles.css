@@ -19,9 +19,11 @@
 /* Sobrescrita do tema noturno: ativado via [data-theme="night"] no <html>, troca para prateado azulado sobre branco */
 :root[data-theme="night"] {
     color-scheme: light;
-    --accent: #9fb8d9;
-    --accent-rgb: 159, 184, 217;
-    --accent-light: #e3ecf7;
+    /* Tons mais escuros que o "azul claro" original: sobre o fundo quase branco deste tema,
+       a versão clara tinha contraste de ~1.9:1 (bem abaixo do minimo de legibilidade de 4.5:1) */
+    --accent: #3d6a99;
+    --accent-rgb: 61, 106, 153;
+    --accent-light: #5f85ac;
     --bg-1: #f7f8fa;
     --bg-2: #eceff3;
     --bg-3: #dfe4ec;
@@ -50,7 +52,12 @@ body {
     transition: color 0.3s ease;
 }
 
-/* Cabeçalho fixo: fundo escuro fixo (nao muda com o tema) para o texto claro continuar legivel tanto sobre as fotos quanto sobre o conteudo, nos dois temas */
+/* Cabeçalho fixo: fundo escuro fixo (nao muda com o tema) para o texto claro continuar legivel tanto sobre as fotos quanto sobre o conteudo, nos dois temas.
+   --header-blur-progress vai de 0 (topo da pagina, hero visivel atras, sem embacado) a 1 (embacado
+   total, igual ao valor fixo de antes) — quem controla esse valor durante a rolagem e o header-blur.js,
+   que escreve a variavel no :root. O fallback do var() abaixo (nao uma declaracao fixa aqui no header)
+   e o que garante 1 (embacado total, comportamento anterior) em paginas sem rolagem, como a index.html —
+   uma declaracao direta nesta regra sobrescreveria sempre o valor herdado do :root, mesmo com JS rodando. */
 header {
     position: fixed;
     width: 100vw;
@@ -62,9 +69,9 @@ header {
     align-items: center;
     row-gap: 10px;
     z-index: 3;
-    background: rgba(6, 5, 5, 0.4);
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
+    background: rgba(6, 5, 5, calc(var(--header-blur-progress, 1) * 0.4));
+    backdrop-filter: blur(calc(var(--header-blur-progress, 1) * 10px));
+    -webkit-backdrop-filter: blur(calc(var(--header-blur-progress, 1) * 10px));
 }
 
 /* Nas páginas com barra de rolagem customizada, desconta os 10px dela pro desfoque do cabeçalho não vazar por cima */
@@ -241,10 +248,15 @@ header nav ul li a.active-nav {
     filter: drop-shadow(0 0 12px rgba(var(--accent-rgb), 0.5));
 }
 
-/* Permite que páginas de conteúdo longas (Itens, Biológico, etc.) rolem dentro do container de altura fixa */
+/* Permite que páginas de conteúdo longas (Itens, Biológico, etc.) rolem dentro do container de altura fixa.
+   isolation:isolate cria um contexto de composicao proprio pra esse container — em algumas versoes do
+   Chrome, o backdrop-filter do .page-content (filho) faz o navegador ignorar a cor customizada da barra
+   de rolagem e usar a cor de destaque do Windows; isolar o container ajuda o Chrome a manter o tema
+   customizado nesses casos. */
 .container.scrollable {
     overflow-y: auto;
     overflow-x: hidden;
+    isolation: isolate;
     scrollbar-width: thin;
     scrollbar-color: rgba(var(--accent-rgb), 0.6) transparent;
 }
@@ -273,6 +285,13 @@ header nav ul li a.active-nav {
 /* Banner das páginas de conteúdo: menor que a hero cheia da landing, aparece só parcialmente na tela */
 .page-hero .hero-image {
     height: 50vh;
+}
+
+/* Painel borrado comeca logo abaixo do banner (50vh), sem vao vazio entre os dois.
+   Precisa ficar ANTES do media query abaixo: como as duas regras tem a mesma especificidade,
+   a que aparece depois no arquivo vence, independente do media query bater ou nao. */
+.hero.page-hero + .page-content {
+    margin-top: 50vh;
 }
 
 /* Gradiente escuro atrás do título do banner para continuar legível independente da imagem */
@@ -522,11 +541,6 @@ header nav ul li a.active-nav {
     transition: background 0.3s ease;
 }
 
-/* Painel borrado comeca logo abaixo do banner (50vh), sem vao vazio entre os dois */
-.hero.page-hero + .page-content {
-    margin-top: 50vh;
-}
-
 /* Layout do texto de bio e da ficha rápida (reaproveitado na landing e em outras páginas) */
 .bio-text {
     font-size: 17px;
@@ -621,7 +635,7 @@ header nav ul li a.active-nav {
     }
 }
 
-/* Telas pequenas: aperta o cabeçalho e encolhe o menu pra caber tudo numa linha só */
+/* Telas pequenas: aperta o cabeçalho e encolhe o menu */
 @media (max-width: 480px) {
     header {
         padding: 14px 16px;
@@ -630,6 +644,9 @@ header nav ul li a.active-nav {
     .logo {
         font-size: 18px;
         gap: 8px;
+        /* Reserva o espaco do botao (que agora fica fixo no canto superior direito) pra o nome
+           longo da home ("Jace Drasnia Hendrickson") quebrar linha antes de esbarrar nele. */
+        max-width: calc(100% - 60px);
     }
 
     .logo-img {
@@ -637,16 +654,25 @@ header nav ul li a.active-nav {
         height: 32px;
     }
 
+    /* Forca o menu pra sua propria linha, sempre embaixo do logo. Sem isso, o titulo curto de
+       algumas paginas (ex: "Pets") cabia ao lado do menu na mesma linha, enquanto titulos mais
+       longos (ex: "Biológico") ja quebravam pra 2 linhas — deixando o cabecalho inconsistente
+       de pagina pra pagina nessa largura. */
+    header nav {
+        flex-basis: 100%;
+    }
+
     header nav ul li a {
         font-size: 11px;
     }
 
-    /* Botão de tema vira flutuante no canto inferior esquerdo, sempre acessível mesmo rolando a página */
+    /* Com o menu sempre na propria linha (regra acima), a linha do logo fica sozinha e com o
+       lado direito sempre livre — o botao pode voltar pro canto superior direito, igual ao
+       desktop/tablet, sem risco de sobrepor o logo ou o menu. */
     .theme-toggle {
-        top: auto;
-        right: auto;
-        bottom: 16px;
-        left: 16px;
-        z-index: 10;
+        top: 14px;
+        right: 16px;
+        bottom: auto;
+        left: auto;
     }
 }
