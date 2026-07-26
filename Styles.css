@@ -1,3 +1,10 @@
+/* Ativa a transição suave entre páginas (View Transitions de documento cruzado) em navegadores
+   com suporte — o conteúdo da página atual esmaece enquanto o da próxima entra, em vez da troca
+   abrupta padrão. Ignorado silenciosamente onde não há suporte (a navegação continua normal). */
+@view-transition {
+    navigation: auto;
+}
+
 /* Variáveis do tema de cores: paleta padrão (dia) — dourado sobre fundo quase preto */
 /* color-scheme avisa o navegador a usar controles nativos (barra de rolagem, etc.) escuros, em vez de seguir o SO */
 :root {
@@ -118,7 +125,7 @@ header nav ul li {
 
 }
 
-/* Sublinhado animado que se expande sob o link do menu ao passar o mouse */
+/* Sublinhado animado que se expande sob o link do menu ao passar o mouse (ou fica fixo no link da página atual) */
 header nav ul li::after {
     content: "";
     position: absolute;
@@ -127,12 +134,16 @@ header nav ul li::after {
     width: 0%;
     height: 2px;
     background-color: var(--accent);
-    transition: width 0.3s ease;
+    transition: width 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 header nav ul li:hover:after {
     width: 100%;
+}
 
+/* Mantém o sublinhado sempre visível sob o link da página atual, não só no hover */
+header nav ul li:has(a.active-nav)::after {
+    width: 100%;
 }
 
 /* Botão de alternância dia/noite — fica FORA do header no HTML de propósito: o header tem backdrop-filter, e um
@@ -236,9 +247,9 @@ header nav ul li a.active-nav {
 .placeholder-card {
     background: var(--card-tint);
     border: 1px solid rgba(var(--accent-rgb), 0.3);
-    border-radius: 16px;
+    border-radius: 18px;
     padding: 50px 60px;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.28), inset 0 1px 0 rgba(255, 255, 255, 0.06);
 }
 
 .placeholder-icon {
@@ -351,9 +362,18 @@ header nav ul li a.active-nav {
 .item-package {
     background: var(--card-tint);
     border: 1px solid rgba(var(--accent-rgb), 0.3);
-    border-radius: 16px;
+    border-radius: 18px;
     padding: 30px;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+    /* Sombra difusa mais suave + brilho fino no topo, imitando uma borda de vidro iluminada por cima */
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.28), inset 0 1px 0 rgba(255, 255, 255, 0.06);
+    transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.3s cubic-bezier(0.4, 0, 0.2, 1), border-color 0.3s ease;
+}
+
+/* Leve elevação ao passar o mouse, reforçando a sensação de camadas (cards "flutuando" sobre o vidro) */
+.item-package:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 16px 40px rgba(0, 0, 0, 0.38), inset 0 1px 0 rgba(255, 255, 255, 0.08);
+    border-color: rgba(var(--accent-rgb), 0.5);
 }
 
 /* Cabeçalho/título do card e texto de descrição */
@@ -402,6 +422,11 @@ header nav ul li a.active-nav {
     border-left: 3px solid var(--accent);
     border-radius: 8px;
     padding: 16px 20px;
+    transition: background-color 0.25s ease;
+}
+
+.sub-item:hover {
+    background: rgba(var(--accent-rgb), 0.08);
 }
 
 .sub-item h3 {
@@ -424,6 +449,54 @@ header nav ul li a.active-nav {
 
 .note-marker {
     color: var(--accent-light);
+}
+
+/* Estado inicial dos cards antes de entrarem na tela (scroll-reveal.js adiciona/troca as classes) */
+.reveal-pending {
+    opacity: 0;
+    transform: translateY(24px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.reveal-visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Barra fina de progresso de leitura, fixa no topo de tudo (acima até do cabeçalho) */
+.scroll-progress {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 3px;
+    width: 0%;
+    background: var(--accent);
+    z-index: 6;
+    transition: width 0.1s linear;
+}
+
+/* Quem prefere menos movimento não recebe as animações de entrada nem o hover com deslocamento —
+   o conteúdo já aparece no estado final, sem prejudicar a leitura */
+@media (prefers-reduced-motion: reduce) {
+
+    .reveal-pending,
+    .reveal-visible {
+        opacity: 1;
+        transform: none;
+        transition: none;
+    }
+
+    .item-package,
+    .item-package:hover,
+    .fact-card,
+    .fact-card:hover {
+        transition: none;
+        transform: none;
+    }
+
+    .scroll-progress {
+        transition: none;
+    }
 }
 
 /* Imagem hero fixa: permanece presa na tela enquanto o conteúdo rola por cima */
@@ -563,6 +636,12 @@ header nav ul li a.active-nav {
     border: 1px solid rgba(var(--accent-rgb), 0.3);
     border-radius: 12px;
     padding: 18px 22px;
+    transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1), border-color 0.3s ease;
+}
+
+.fact-card:hover {
+    transform: translateY(-3px);
+    border-color: rgba(var(--accent-rgb), 0.5);
 }
 
 .fact-label {
