@@ -1,0 +1,363 @@
+import { ItemPackage } from '@/types/content'
+
+export const pets: ItemPackage[] = [
+  {
+    title: "Zhask",
+    description: [
+      "Os escravos se tratam de homúnculos criados por Sedah com vigor infinito devido à sua raça. Em uso, dão 10% de XP a mais em missões, lutas e eventos, podendo ser usados também em cenas casuais e portar itens recebidos por seu mestre, ficando a seu critério.",
+    ],
+    bonus: "+10% de XP em missões, lutas e eventos enquanto em uso.",
+    items: [
+      {
+        title: "Fonte do Pesadelo",
+        description: "Zhask cria um tipo de servo em qualquer lugar do campo onde esteja, disparando rajadas a laser de luz despertada nos alvos. Pode criar um servo por turno, o que torna seu uso bastante estratégico — o servo some apenas se for destruído, tendo a resistência de bazô.",
+      },
+      {
+        title: "Enxame de Clones",
+        description: "Os servos criados jogam pequenos clones com capacidade explosiva, como minas terrestres, que se ativam ao serem tocados por algum ser, explodindo o alvo e o incapacitando de usar magias acima do nível despertado no turno em que foi atingido — sem causar dano, apenas esse controle.",
+      },
+      {
+        title: "Ultimate: Chegada do Dominador",
+        description: "Ao se teletransportar para um dos servos criados, Zhask se funde com ele, assumindo uma aparência maior e grotesca e elevando sua resistência para ori-calco por 3 turnos. Nesse estado, o laser da primeira habilidade passa de nível despertado para místico, e os clones da segunda aumentam consideravelmente em quantidade, deixando de apenas travar magias acima do despertado e passando a anular o uso mágico por completo — restando somente racial e itens. Fundido, Zhask ganha ainda uma passiva extra: pode se teletransportar para qualquer lugar onde tenha deixado um servo, podendo literalmente cruzar o mundo com eles durante os 3 turnos de fusão.",
+        featured: true,
+      },
+    ],
+  },
+  {
+    title: "Kha'Zix",
+    description: [
+      "Uma fera do vazio com o propósito de mudar e evoluir, sendo como um louva-a-deus roxo e carnívoro. Kha'Zix tem lâminas afiadas com as quais pode facilmente cortar bazô, pode disparar espinhos de seu corpo que perfuram bazô, e suas pernas são fortes o suficiente para dar saltos enormes sobre os inimigos, além de poder ficar invisível a olho nu desde que não ataque ninguém.",
+      "Caso seu mestre já tenha despertado, a fera também muda e desperta: suas lâminas passam a cortar ori-calco, seus espinhos absorvem a magia dos alvos para si, ganha asas de inseto para caçar e saltar sobre os inimigos pelo ar, e sua invisibilidade deixa de ser detectada por qualquer técnica de nível mortal até o momento em que atacar um alvo.",
+    ],
+  },
+  {
+    title: "Ting-Lu",
+    description: [
+      "Ting-Lu é um magnífico alce das montanhas, com pelagem marrom e chifres imponentes, destacando-se por sua imponência e territorialismo. Seus chifres, de um verde hipnotizante, complementam seus olhos cativantes. Orgulhoso, Ting-Lu expressa seu apreço por algo ou alguém usando sua força colossal para reivindicar a posse: lentamente traz sua cabeça extremamente pesada ao chão, abrindo a terra em fissuras que chegam a mais de 50 metros de profundidade. Sua resistência é de ori-calco negro.",
+      "Pode aumentar a massa e o peso de seu corpo à vontade, inclusive assumindo uma forma bípede. Ao se lançar contra outro corpo nega força infinita, agindo como uma força poderosa e impenetrável, cobrindo-se com uma substância enegrecida.",
+      "Utiliza seus chifres para criar uma areia mística com propriedades de magia jurássica; ao espalhá-la, desencadeia uma tempestade que inutiliza todos os efeitos derivados de minérios, tornando-os ineficazes até o final da luta, missão ou evento.",
+    ],
+    items: [
+      {
+        title: "Ruína",
+        description: "Impede a manifestação de cosmo verdadeiro nos primeiros 3 turnos em que Ting-Lu estiver em campo, estabelecendo um campo de energia que proíbe interferências cósmicas em seu território.",
+      },
+    ],
+  },
+  {
+    title: "Rei",
+    description: [
+      "Uma das Calamidades disponíveis na loja Drasnia — feras poderosas capazes de abalar o cenário em que estão. Rei é um humanoide com aspectos de peixe, com cores verde e branco por toda a extensão corporal, um exímio nadador. Possui 7 metros de altura e pode controlar água ao seu bel-prazer em nível místico; guarda em si um ácido poderoso, também de nível místico, que pode disparar de sua boca como um projétil. Em locais chuvosos ou dentro d'água, seu corpo ganha mais força, ficando maior e mais definido — nesse estado sua força chega ao infinito e lhe dá o controle sobre criaturas marinhas, que passam a lhe servir como a um rei (não incluindo seres de raças marinhas).",
+      "Sua resistência natural é de ori-calco azul, por ser o rei do mar. Seus tsunamis, quando gerados em seu estado musculoso, ganham a força da fera, tornando-se um tsunami de força infinita capaz de destruir facilmente meio distrito apenas com o impacto. Se ferido gravemente, pode comer suas criaturas marinhas para se curar, regenerando até membros perdidos.",
+    ],
+  },
+  {
+    title: "Incineroar",
+    owner: "Trindade regional, Alola",
+    description: [
+      "Trindades regionais são compostas por 3 pets — um vermelho, um verde e um azul — que, como a maioria dos pets atuais, evoluem conforme seu mestre evolui. Cada um possui 3 formas: para atingir a segunda é preciso upar 500 XP, e para a terceira mais 500, totalizando 1.000 níveis para se chegar ao estágio final. A trindade de Alola é composta por Litten, Torracat e Incineroar.",
+    ],
+    bonus: "+10% de XP obtido em treinos, missões e eventos.",
+    items: [
+      {
+        title: "Litten (Vermelho)",
+        description: "Um pet felino de fogo, lindo e delicado, que adora se exibir para os amigos e principalmente para seu mestre. Gosta de carinho na barriga e, quando muito emocionado, gera calores intensos pelo corpo a ponto de queimar quem tocar em seu pelo. Sua resistência é de bazô. Possui a habilidade Brasas: canaliza chamas a nível místico em sua boca e libera uma fagulha de pequenas brasas contra os alvos, com efeito de contador — se o mestre for nível 1.000, serão 1.000 brasas lançadas. Ao acertar, o alvo recebe o efeito de queimação, perdendo 10% por turno.",
+      },
+      {
+        title: "Torracat",
+        description: "A forma evoluída de Litten, agora maior, com uma coleira no pescoço com uma orbe flamejante ao centro. Sua pelagem continua vermelha e preta, ficando um pouco mais feroz. Mantém a resistência de bazô e possui a habilidade Presas de fogo: manifesta chamas intensas na boca a nível místico, criando presas flamejantes; suas mordidas nesse estado ganham magia de perfuração, ignorando defesas, e o local mordido explode em fogo, causando ainda mais dano interno.",
+      },
+      {
+        title: "Incineroar",
+        description: "A forma evoluída de Torracat e seu estado final, agora bípede e com o corpo definido. A coleira com a orbe flamejante passa para sua cintura, mantendo o mesmo efeito; seu pelo mistura vermelho e preto com detalhes cinzas, e sua resistência sobe para ori-calco vermelho. Adora ficar abraçado com quem gosta, sendo difícil se soltar dele. Possui duas habilidades: Perseguição, que permite a Incineroar perseguir vítimas que tentem se afastar dele — seu corpo se mimetiza em sombras a nível místico e ele surge sobre a sombra do alvo, ativável apenas se o alvo se afastar (avançar contra ele o mantém ao alcance dos golpes físicos); e Lariat negro, em que canaliza cosmo negro pelo corpo, focado em braços e pernas, e dispara girando em alta velocidade como um pião contra os alvos — durante o giro repele qualquer projétil lançado contra ele, girando ao dobro da velocidade máxima de seu mestre, e ao acertar cai sobre os alvos como um golpe de vale-tudo, já que durante a queda sua pelagem ganha as propriedades do cobre enegrecido, anulando a força física.",
+        featured: true,
+      },
+    ],
+  },
+  {
+    title: "Grimmsnarl",
+    items: [
+      {
+        title: "Impidimp",
+        description: "Um pequeno ser magrelo, com uma cabeça e orelhas grandes proporcionais ao seu tamanho. Possui uma marca negra no rosto, onde ficam seus grandes olhos, nariz pontiagudo e presas afiadas; sua língua azul costuma ficar para fora. É levado e trapaceiro: pode criar esferas com sua magia para lançar contra os alvos e, por ser brincalhão, consegue imitar qualquer técnica elementar usada contra ele e devolvê-la ao usuário, desde que o golpe seja de alguém de nível igual ou inferior ao dono do Impidimp — seja golpe biológico, mágico, de item ou não. Possui magia cósmica no corpo, podendo usá-la nesses ataques de energia.",
+      },
+      {
+        title: "Morgrem",
+        description: "A forma evoluída de Impidimp, um pouco maior, ainda magrelo, com a cabeça mais proporcional ao corpo. Da cintura para baixo sua pele é verde-claro, o resto do corpo é vermelho/vinho, e a marca do rosto desaparece — em troca, ganha cabelo com uma grande franja negra cobrindo um olho e uma orelha. Para se obter um Morgrem é preciso reunir 3 Impidimp e fundi-los permanentemente (avisar em merchant). Morgrem faz tudo o que Impidimp já faz e ainda é um ótimo batedor de carteiras, roubando itens de inimigos de nível igual ou inferior ao mestre (desde que inferior a lendário). Sua magia cósmica evolui, ganhando os aspectos depravado e imperioso — usáveis em seus ataques, mas apenas um por cenário.",
+      },
+      {
+        title: "Grimmsnarl",
+        description: "A forma evoluída de Morgrem: pés, cintura, orelhas e rosto em tom verde fluorescente, presas muito afiadas e um rosto pouco amistoso. O resto do corpo é coberto por pelagem negra que o deixa intimidador, com mãos escondidas sob pelos que lembram três garras enormes — resistência de ori-calco negro. Para se obter um Grimmsnarl é preciso reunir 5 Impidimp e fundi-los permanentemente (avisar em merchant). Faz tudo o que Impidimp e Morgrem fazem, mas sem restrição de nível (desde que nível mortal), podendo roubar qualquer item — com exceção dos ômegas — desarmando os alvos; os itens não vão para o dono de Grimmsnarl, apenas somem do cenário, uma vez a cada 3 turnos. Pode ainda manipular seus próprios pelos para criar armas para o mestre, e usa livremente as duas magias cósmicas (imperiosa e depravada) sem precisar escolher apenas uma. Por ser bom batedor de carteiras e serelepe, dá ao mestre +10% de XP e gold obtidos em serviços, treinos, lutas, missões e eventos. Não é afetado por habilidades de controle — nada impede alguém de tentar controlá-lo, mas nada terá efeito.",
+        featured: true,
+      },
+    ],
+  },
+  {
+    title: "Regieleki",
+    description: [
+      "Um dos 5 grandes Regis, seres que servem como guardiões de locais históricos, criados por Portokali, a entidade divina do movimento e o primeiro som do universo. Regieleki é um ser feito de pura eletricidade, com alguns olhos em sua face redonda e, no lugar de braços, fios de eletricidade que juntos lembram pequenas asas. Conta a lenda que Portokali enfrentou uma criatura abissal que criava relâmpagos e, ao derrotá-la, moldou um de seus raios neste ser, retirando dele as características do abismo.",
+      "É o mais rápido de sua família, pois era o guardião da entrada da usina em Celestia, na academia Don Dondoria — a usina criava energia elemental sem uso de magia, sendo a primeira fonte de energia sustentável que o mundo tentou criar. Desapareceu de lá não muito tempo atrás, sobreviveu à guerra do Pentagrama e à era de Frosto, e foi descoberto por Pilatos, membro do conselho de Extalia, que o trouxe para o reino e iniciou pesquisas sobre essa fonte de energia. Por ser o mais rápido de sua família, Regieleki pode se mover 3 vezes mais rápido que a velocidade atual de seu mestre e transformar o próprio corpo em pura eletricidade, a nível místico. Também impede que o elemento eletricidade seja usado por qualquer um além de seu mestre enquanto estiver no mesmo cenário.",
+      "Sua energia elétrica é tão grande que possui selos de contenção nos \"braços\" e na cintura, com resistência de ori-calco azul; se forem destruídos, a eletricidade se descontrola e explode, levando junto meio distrito. Traz ainda consigo uma Ficha Portokali — uma moeda rosa com notas musicais desenhadas ao centro, usada para trocas futuras.",
+    ],
+    items: [
+      {
+        title: "Gaiola elétrica",
+        description: "O golpe assinatura de Regieleki: ele levita e expande seu corpo elétrico, criando uma gaiola no cenário de onde pode disparar rajadas elétricas contra os alvos com o poder de magia mística. Dentro da gaiola, sua eletricidade perde o conceito de magia — assim como suas desvantagens elementais — e, enquanto isso, qualquer habilidade elétrica usada por seu mestre também ganha essas propriedades, tornando o pet monstruoso em lutas estratégicas.",
+        featured: true,
+      },
+    ],
+  },
+  {
+    title: "Tyranitar",
+    description: [
+      "Esses pets nascem de ovos ganhos pelos departamentos e, assim como as Insígnias (que também possuem mais de uma forma), evoluem junto com o mestre: a cada 500 níveis upados após ganhar a descrição do pet, ele evolui de forma. Um mestre de nível 1.000, por exemplo, precisa upar até o nível 2.000 para chegar à forma final. As habilidades se mantêm a cada evolução, então o pet termina com 4 habilidades.",
+    ],
+    items: [
+      {
+        title: "Larvitar",
+        description: "Um pet fofo e bem pesado que, apesar da aparência de pequeno dragão, não pertence à classe dracônica e sim à jurássica, como um pequeno dinossauro. Seu corpo lembra uma pedra acinzentada, com resistência de bazô, e possui um chifre mediano na cabeça. Fica junto ao departamento de treinamento, pois adora carregar os equipamentos de seu mestre, mesmo sendo extremamente medroso. Possui a habilidade Lágrimas falsas: começa a chorar liberando lágrimas falsas — um choro escandaloso que remove de si e de seu mestre qualquer efeito negativo causado por habilidades derivadas de pets ou invocações.",
+      },
+      {
+        title: "Pupitar",
+        description: "A forma evoluída de Larvitar, lembrando agora um casulo de pedra azulado, com olhos bem grandes e peso ainda maior, mantendo a mesma resistência. Gosta de servir como saco de pancadas dos membros do departamento de treinamento, principalmente dos recrutas. Possui a habilidade Defesa de pedra: manipula o corpo de pedra ganhando uma coloração de cobre, adquirindo as propriedades do cobre enegrecido e se tornando imune a qualquer ataque derivado de golpes físicos, mesmo os de força infinita.",
+      },
+      {
+        title: "Tyranitar",
+        description: "A forma evoluída de Pupitar e seu estágio final: grande, com pele em tons verde-musgo, resistência elevada a ori-calco negro, corpo maior e uma longa cauda. Acostumado a andar por aí durante a noite, é um bom guia e parceiro para os novatos do departamento de treinamento no período noturno. Possui duas habilidades: Choque brutal, em que libera cosmo negro pelo corpo formando uma armadura cósmica e avança contra o alvo com um golpe de corpo — enquanto usa essa armadura, torna-se imune a qualquer golpe derivado de projéteis, repelindo disparos mesmo com magia de perfuração; e Hiper raio, em que reúne magia jurássica na boca e a dispara contra os alvos com potencial de magia mística pura, capaz de abater um pelotão inteiro com um só disparo — o poder jurássico anula os efeitos dos minérios atingidos por três turnos, mas após usar o Hiper raio, Tyranitar precisa descansar um turno inteiro.",
+        featured: true,
+      },
+    ],
+  },
+  {
+    title: "Metagross",
+    description: [
+      "Para evoluir de Beldum para Metang é preciso upar 500 níveis, e de Metang para Metagross mais 500 — totalizando 1.000 níveis para a forma final, que mantém as 4 habilidades.",
+    ],
+    items: [
+      {
+        title: "Beldum",
+        description: "Um pet peculiar: uma espécie de garra metálica azulada, com um único olho avermelhado na parte frontal, sempre flutuando perto do mestre. Ajuda o departamento de pesquisa e desenvolvimento carregando ferramentas em tarefas cotidianas, com resistência de bazô. Possui a habilidade Derrubar: se joga contra os alvos para empurrá-los, com força infinita durante o choque — muito usada para derrubar árvores e pedras no caminho das máquinas do departamento.",
+      },
+      {
+        title: "Metang",
+        description: "A forma evoluída de Beldum, agora com duas garras grandes no lugar do corpo anterior, ainda azul, com dois olhos vermelhos. Continua flutuando e, com rosto e corpo maiores, pode carregar muito mais equipamentos, inclusive o próprio mestre. Mantém a resistência de bazô e possui a habilidade Garras de metal: canaliza magia mística de metal nas garras, fazendo-as crescer para atacar fisicamente os alvos — as garras ganham magia de perfuração, ignorando defesas.",
+      },
+      {
+        title: "Metagross",
+        description: "A forma evoluída de Metang, ainda azul, agora com quatro pernas que lembram o corpo de Beldum, firme como uma máquina poderosa e com um grande X sobre o rosto. Carrega não só o mestre e equipamentos, como pode destruir prédios inteiros apenas avançando — os próprios membros do departamento temem uma revolta desse pet. Sua resistência sobe para ori-calco azul, e possui duas habilidades: Agilidade, em que usa poderes psíquicos ativando sua magia de Drive, dando vários dashes pelo local e dobrando, uma vez por turno, a velocidade tanto sua quanto de seu mestre; e Meteoro de metal, em que ergue as patas dianteiras contra o alvo enquanto as traseiras se enchem de magia de metal a nível místico cobrindo todo o corpo, avançando como um cometa de metal místico que destrói tudo pelo caminho — terra, água ou ar — com pseudomagia de destruição, só parando quando o mestre ordena, e mesmo assim tende a não obedecer até destruir todas as construções no percurso.",
+        featured: true,
+      },
+    ],
+  },
+  {
+    title: "Hydreigon",
+    description: [
+      "Para evoluir de Deino para Zweilous é preciso upar 500 níveis, e de Zweilous para Hydreigon mais 500 — totalizando 1.000 níveis para a forma final, que mantém as 4 habilidades.",
+    ],
+    items: [
+      {
+        title: "Deino",
+        description: "O pet mascote do departamento policial: um pequeno dragão emo, todo preto e quadrúpede, com resistência de bazô. Um ótimo parceiro nas lutas contra o crime, gosta muito de morder seus alvos — e até o próprio mestre, achando que é carinho — muitas vezes arrancando membros fora do corpo. Possui a habilidade Mordida: abre bem a boca e desfere uma potente mordida no alvo, com as presas ganhando magia de perfuração, ignorando defesas; depois de morder, dificilmente solta o alvo.",
+      },
+      {
+        title: "Zweilous",
+        description: "A forma evoluída de Deino, ainda um pet emo e quadrúpede, agora com duas cabeças no lugar de uma, mantendo a resistência de bazô. Diferente de sua forma anterior, não gosta muito de sair para procurar crime, preferindo ficar na base comendo rosquinhas como o delegado Saldanha. Possui a habilidade Corpo sombrio, uma passiva em que sua pelagem ganha uma aura negra e negativa de pura escuridão, tornando-o imune a debuffs e controles de terceiros — obedecendo apenas ao mestre.",
+      },
+      {
+        title: "Hydreigon",
+        description: "A forma evoluída de Zweilous e seu estágio final: deixa de ser quadrúpede, passando a bípede, ganha a capacidade de voar e de carregar o mestre, e agora tem três cabeças, duas delas localizadas nas mãos. Sua resistência sobe a ori-calco negro e, como o justiceiro da polícia, possui duas habilidades: Pulso sombrio, em que exala sua magia sombria convertida em cosmo negro, lançando uma onda de 5 metros ao redor do corpo que repele todos por perto além de causar dano do elemento; e Ataque triplo, em que canaliza eletricidade, fogo e gelo a nível místico e dispara os três elementos simultaneamente contra os alvos — ao acertar, o alvo recebe três status negativos ao mesmo tempo: queimação (10% por turno), paralisação (-50% de velocidade até o fim da luta, missão ou evento) e congelamento (todas as resistências caem uma casa, de modo que ori-calco passa a ser bazô) — sendo o único ataque a desencadear três efeitos elementais de uma só vez.",
+        featured: true,
+      },
+    ],
+  },
+  {
+    title: "Duraludon",
+    owner: "Pet mítico",
+    description: [
+      "Nas profundezas das terras místicas, onde a magia e o metal se entrelaçam, surge Duraludon, o Dragão de Aço Forjado. Colosso de escamas metálicas, imponente como um prédio, é uma criação única que personifica a fusão entre a natureza dracônica e a essência do aço. Suas escamas reluzem em tonalidade prateada, com solidez que rivaliza com os minerais mais robustos, e cada movimento seu emana o som de engrenagens e metais bem trabalhados.",
+    ],
+    items: [
+      {
+        title: "Defesa de Aço",
+        description: "Uma proteção mágica que envolve Duraludon em uma aura de resistência incomparável. Diante de ameaças, pode invocar essa defesa, transformando as escamas em uma barreira quase impenetrável que reflete ataques físicos com a dureza do metal mais resiliente. Além da defesa, é capaz de lançar rajadas de magia metálica mística — energia pura capaz de perfurar até as defesas mais robustas; ao concentrar essa magia no olhar, seus olhos brilham intensamente antes de liberar feixes luminosos de poder metálico.",
+      },
+      {
+        title: "Archaludon, a Ponte Tempestuosa",
+        description: "Disponível caso o elemento escolhido na compra tenha sido eletricidade. Da evolução de Duraludon surge Archaludon: um dragão metálico que assume a forma de uma ponte gigantesca, forjada com os metais mais raros e mágicos. Suas escamas brilham com luz elétrica pulsante e suas asas se estendem como arcos magníficos, com correntes elétricas dançando ao redor em uma aura tempestuosa de poder. Possui a habilidade Chuva de Meteoros Draconianos: ao se elevar aos céus, canaliza magia para criar um espetáculo de meteoros draconianos que chovem sobre o cenário com força avassaladora, cada um imbuído do poder mágico do dragão. Pode ainda acumular, na boca, uma carga de magia elétrica a nível perdido, liberando raios ardentes de eletricidade draconiana que se estendem pelos céus com força devastadora — habilidade que exige um turno inteiro para acumular, exceto em locais de clima chuvoso, onde pode descarregar imediatamente.",
+        featured: true,
+      },
+    ],
+  },
+  {
+    title: "Ceruledge",
+    description: [
+      "Um pet peculiar e humanoide, com armadura roxa e vermelha; em seus braços, duas lâminas enormes que produzem chamas negras. Pode lançar cortes desse tipo de magia — fogo a nível místico — no plano espiritual, ignorando assim defesas físicas. Sua resistência é de ori-calco negro.",
+    ],
+    items: [
+      {
+        title: "Lâmina amarga",
+        description: "Com as duas lâminas negras, Ceruledge manifesta chamas a nível místico para lançar contra os alvos; caso acerte, o alvo recebe dano crítico de 10%.",
+      },
+    ],
+  },
+  {
+    title: "Applin",
+    description: [
+      "A Maçã do Amor é a forma de controle de Applin, também conhecida como Dipplin: transforma-o em uma fruta irresistível, coberta por um melado especial que pode ser lançado nos alvos, reduzindo sua velocidade pela metade a cada turno. É uma forma eficaz de controle de campo, impedindo que inimigos se movam rapidamente e dando vantagem estratégica ao mestre.",
+      "Todas as formas de Applin possuem resistência excepcional, feita de ori-calco negro, tornando-o bastante durável contra ataques físicos e mágicos.",
+    ],
+  },
+  {
+    title: "Kommo-o",
+    description: [
+      "Esse pet funciona como os pets dos departamentos: 500 níveis upados evoluem a primeira forma, mais 500 evoluem a segunda.",
+    ],
+    items: [
+      {
+        title: "Jangmo-o",
+        description: "Um pet dragão lutador: um pequeno dragão com uma escama em formato de coração dourado sobre a cabeça, extremamente rabugento e sempre disposto a brigar com os outros pets do mestre. Sua resistência é de bazô dourado. Possui a habilidade Cabeçada: desfere uma cabeçada no alvo que, ao acertar, altera sua velocidade temporariamente, reduzindo-a pela metade até o final da luta, missão ou evento.",
+      },
+      {
+        title: "Hakamo-o",
+        description: "A forma evoluída de Jangmo-o, agora maior, ainda com o coração dourado na cabeça e escamas avermelhadas por toda a extensão dos grandes braços — continua esquentado e gosta de uma boa briga franca. Mantém a mesma resistência e possui a habilidade Soco trovão: canaliza eletricidade mística nos braços para socar e eletrocutar os alvos, com efeito de contador — um soco desfere 1.000 socos se o mestre for nível 1.000.",
+      },
+      {
+        title: "Kommo-o",
+        description: "A forma evoluída de Hakamo-o e seu estágio final: maior e mais imponente, com braços de verdadeiro lutador, a escama de coração agora um grande elmo dourado e vermelho, e uma cauda longa coberta de escamas. Sua resistência sobe para bazô dourado e ori-calco branco. Possui duas habilidades: Dragão lutador, uma passiva que o torna imune a golpes físicos e derivados de qualquer estilo de luta marcial, graças a uma aura de cosmo negro que protege seu corpo; e Chicote dracônico, em que canaliza fogo a nível místico na cauda, ganhando aspectos de magia dracônica que o tornam imune a golpes elementais quando a usa em defesa — a cauda carrega magia de perfuração, ignorando defesas, e sua força durante o contato se torna infinita.",
+        featured: true,
+      },
+    ],
+  },
+  {
+    title: "Walking Wake",
+    description: [
+      "Uma das feras paradoxais da loja Drasnia, vindas do passado. Walking Wake é uma espécie de dinossauro híbrido, primitivo e feroz, com uma juba azulada cobrindo pescoço e parte das costas, e duas caudas longas com escamas amarelas que balançam constantemente. É bípede, com pequenas garras. No passado foi montaria de um dos membros do Trifax Bestial — Belly, quando assumiu o posto de imperatriz Neko no lugar de Tauros —, sendo seu fiel escudeiro (linhas do tempo nem sempre coincidem).",
+      "Por ser uma fera primitiva, possui a passiva de dobrar sua resistência e não poder ser destruída em terrenos ensolarados. Sua resistência básica é de ori-calco azul, e sua velocidade acompanha a do mestre, dobrando quando ele está montado nela — um belo parceiro. Possui magia jurássica, ficando imune e anulando efeitos de minérios que a tocarem física ou magicamente; seus golpes são perigosos e velozes como um raio. Por ser tratada como um ser primitivo, não pode ser afetada, positiva ou negativamente, por efeitos que envolvam tempo, e ainda dá +10% de XP pelos atos realizados junto ao mestre.",
+    ],
+    items: [
+      {
+        title: "Rugido Catarse",
+        description: "Canaliza água a nível místico na boca e dispara uma rajada contra os alvos, com grande pressão para cortar ou empurrar. Se o alvo já estiver com algum status negativo, a rajada ganha dano verdadeiro, tornando-se extremamente mortal.",
+      },
+    ],
+  },
+  {
+    title: "Latios",
+    description: [
+      "Após realizar os 30 treinos de sua associação, libera-se o pet exclusivo da Alquimia Celestial: Latios, o protetor do destino. Um dragão azul com marcas vermelhas pelo corpo, macho, bravo e rebelde, com asas nas costas e olhar selvagem — não gosta que se aproximem dele sem permissão. Sua resistência é de ori-calco azul. Passivamente, não pode ser afetado por magias relacionadas a efeitos do destino, tendo o mesmo efeito de bazô laranja mesmo sem possuir essa resistência no corpo — imunidade que se estende também ao mestre. Uma vez por cenário, pode alterar o destino de algo prestes a ser destruído ou morto, removendo esse destino e salvando o alvo da magia.",
+    ],
+    items: [
+      {
+        title: "Visão clara",
+        description: "Latios pode enxergar qualquer lugar onde esteja alguém que seu mestre conheça, compartilhando como um holograma aquilo que está vendo — podendo assim espionar um inimigo ou aliado e acompanhar claramente o que acontece no cenário em que ele está. Pode manter a habilidade pelo tempo necessário e quantas vezes for preciso, mas se o espiado perceber que está sendo observado, Latios não pode voltar a ativá-la sobre ele.",
+      },
+      {
+        title: "Mega Latios",
+        description: "Nessa forma, Latios ganha a aparência de um jato avermelhado com detalhes azuis, com asas que possuem turbinas potentes emanando chamas roxas — pode assumi-la sempre que desejar. Enquanto nessa forma, o mestre ganha +10% de XP em treino, serviço, luta, missão e evento. Se o mestre montar nele, Latios deixa de ser tratado como pet e passa a ser tratado como item, sendo buffado e nerfado pelos efeitos dessa categoria, mas mantendo suas outras habilidades. Ganha ainda a habilidade Pulso draconico: enquanto montado, o mestre pode ordenar o disparo de uma rajada de magia dracônica pela boca, como uma baforada que se transforma, no percurso, em um dragão chinês longo e de dentes afiados — destrói elementos pelo caminho até morder o alvo, impedindo-o de manifestar elementos novamente enquanto estiver no cenário atual.",
+        featured: true,
+      },
+    ],
+  },
+  {
+    title: "Latias",
+    description: [
+      "Após realizar os 30 treinos de sua associação, libera-se o pet exclusivo da Samsara: Latias, a viajante do tempo futuro. Um dragão vermelho com marcas azuis pelo corpo, fêmea, fofa, com asas nas costas e olhar meigo — adora fazer e receber carinho. Sua resistência é de ori-calco vermelho. Passivamente, não pode ser afetada por magias relacionadas a efeitos temporais, tendo o mesmo efeito de bazô dourado mesmo sem possuir essa resistência no corpo — imunidade que se estende também ao mestre. Pode criar túneis de magia temporal para escapar de cenários ou viajar entre eles.",
+    ],
+    items: [
+      {
+        title: "Ataque futuro",
+        description: "Latias pode pegar uma habilidade do mestre — de pet, item, biológico ou qualquer natureza — e enviá-la ao futuro de sua escolha, dentro de um número de turnos à frente baseado no nível do mestre (um nível 10.000, por exemplo, pode escolher entre 1 e 10 turnos). No turno escolhido, a habilidade surge contra o alvo desejado, como um golpe futuro que não pode ser negado nem por efeitos predadores, a não ser que o alvo já tenha erguido uma defesa temporal apropriada com bazô dourado — por isso, baixar as defesas antes do golpe futuro chegar é crucial.",
+      },
+      {
+        title: "Mega Latias",
+        description: "Nessa forma, Latias ganha a aparência de um jato azulado com detalhes vermelhos, com asas que possuem turbinas potentes emanando chamas roxas — pode assumi-la sempre que desejar. Enquanto nessa forma, o mestre ganha +10% de XP em treino, serviço, luta, missão e evento. Se o mestre montar nela, Latias deixa de ser tratada como pet e passa a ser tratada como item, sendo buffada e nerfada pelos efeitos dessa categoria, ainda podendo abrir seus túneis temporais. Ganha a habilidade Proteção futura: enquanto montado, o mestre pode escolher um item, pet ou biológico de um alvo e removê-lo do jogo por um turno a cada 1.000 níveis do alvo (um nível 3.000, por exemplo, remove por 3 turnos) — o efeito dura até um dos dois envolvidos sair do cenário, podendo então escolher outro alvo.",
+        featured: true,
+      },
+    ],
+  },
+  {
+    title: "Tubarão Martelo",
+    description: [
+      "Um dos patronos animalescos da loja Drasnia: inicialmente uma esfera ou gema cristalina com a marca de um animal em seu interior — nesse caso, o Tubarão Martelo. Sozinha, a esfera é apenas um item sem valor, mas ao ser ativada (bastando apertá-la e dizer o nome do patrono), veste o portador com uma roupa colada ao corpo por completo, incluindo luvas, botas e um elmo com visor sobre os olhos — de ori-calco azul, com coloração azulada e detalhes brancos serrilhados, deixando o portador grande e atraente.",
+    ],
+    items: [
+      {
+        title: "Martelo d'água",
+        description: "O usuário manipula água a nível místico na mão, criando um martelo grande do elemento para golpear os alvos; não precisa reunir a água na própria mão, podendo fazê-la surgir diretamente sobre o alvo desde que haja água no local, gerando um golpe surpresa.",
+      },
+      {
+        title: "Impacto de tubarão",
+        description: "Uma passiva do traje: o usuário se torna imune a habilidades cujo texto ou efeito gere impactos de qualquer natureza, mostrando ter uma cartilagem resistente e maleável como a do animal que o inspirou.",
+      },
+      {
+        title: "Zord",
+        description: "A real função de um patrono: ao quebrar sua gema ou esfera, o usuário pode, uma vez por cenário, materializar seu animal protetor em campo como um ser mecânico de 20 metros — nesse caso, um gigantesco Tubarão Martelo, azul e branco, com resistência de ori-calco azul e bazô laranja. O portador pode entrar em seu interior para atacar remotamente ou se proteger; os Zords entram na mesma categoria das forças arcanas, sendo uma construção, e por isso também podem ser afetados, positiva ou negativamente, por efeitos que envolvam máquinas, como a magia de Drive. Se um Zord for destruído, o usuário é expelido de seu interior, ficando inalvejável por dano no turno em questão. O Tubarão Martelo pode ainda liberar água pelo corpo, criando uma segunda pele molhada que permite nadar mesmo pelo ar ou pela terra como se fossem água, podendo mergulhar deixando apenas as barbatanas visíveis e formando uma poça no local — como se nadasse em outra dimensão, escapando de ataques mesmo sendo enorme, ou surpreendendo os inimigos com o próprio tamanho. Os Zords podem se fundir, criando novos seres, mas apenas quando todas as peças forem adquiridas.",
+        featured: true,
+      },
+    ],
+  },
+  {
+    title: "Gutsman",
+    owner: "CyberRelic — Net-Pet Module",
+    description: [
+      "O CyberRelic é um dispositivo de última geração que abriga seres digitais conhecidos como Net-Pets (Net Evolutionary Pets), projetado especialmente para armazenar e evocar o Net-Pet Gutsman: um homem enorme, lembrando um ogro ou brutamontes. Robótico e grande, com músculos definidos além do imaginável, veste um traje que cobre todo o corpo menos os olhos; braços longos e corpo curvado para frente o fazem lembrar um gorila, revelando um lado bestial oculto. Seu corpo é feito de Ori-Calco vermelho, o que lhe dá resistência excepcional.",
+      "O CyberRelic permite que Gutsman seja invocado ou armazenado digitalmente conforme a necessidade do usuário, usando magia do plano digital, e disponibiliza uma interface holográfica para comandos específicos, como um amigo virtual — funcionalidade que garante +10% do XP obtido pelo mestre em lutas, missões, eventos, serviços e treinos diários.",
+    ],
+    items: [
+      {
+        title: "Martelo Gutsman",
+        description: "Habilidade assinatura de Gutsman: sua mão direita brilha e se torna um martelo negro e grandioso, com a mesma resistência de seu corpo, usado para golpear os alvos — o martelo carrega magia de pseudodestruição, destruindo defesas no momento do contato.",
+      },
+      {
+        title: "Canhão gorila",
+        description: "Gutsman transforma a mão esquerda em um canhão do tamanho dos usados em navios, disparando projéteis igualmente grandes; cada acerto reduz a resistência do alvo em uma casa — de ori-calco para bazô, e assim por diante.",
+      },
+      {
+        title: "Gutsman esmaga",
+        description: "Gutsman junta as duas mãos acima do corpo e as arremessa contra o solo com grande violência; ao acertar, gera um tremor do tamanho de um terremoto, capaz de afetar um quarto de distrito usando terra a nível místico — seu real efeito é destruir todas as construções dentro do raio de alcance.",
+        featured: true,
+      },
+    ],
+  },
+  {
+    title: "Charmander",
+    items: [
+      {
+        title: "Charmander (Vermelho)",
+        description: "Um pet dragão filhote, vermelho e sem asas, apenas com a cauda em chamas. Dócil, adora ficar perto do mestre, principalmente quando é carregado nos ombros. Sua resistência inicial é de bazô. Possui a habilidade Brasas: canaliza chamas a nível místico na boca e libera uma fagulha de pequenas brasas contra os alvos, com efeito de contador — 1.000 brasas se o mestre for nível 1.000. Ao acertar, o alvo recebe o efeito de queimação, perdendo 10% por turno.",
+      },
+      {
+        title: "Charmeleon",
+        description: "A forma evoluída de Charmander, um pouco maior e com coloração mais escura, com uma espécie de chifre no centro da cabeça e a cauda ainda em chamas — mais agressivo que a forma anterior. Mantém a mesma resistência e possui a habilidade Garra do dragão: cria, com as garras, a imagem de garras maiores feitas de magia mística pura, usadas para arranhar os alvos; o que as torna mais perigosas é a magia dracônica embutida nelas, aplicando os efeitos dessa magia nos golpes.",
+      },
+      {
+        title: "Charizard",
+        description: "A forma evoluída de Charmeleon e seu estágio final: passa dos dois metros de altura e finalmente ganha asas para voar. Feroz, adora proteger os aliados e principalmente o mestre, além de dar caronas nas costas enquanto voa. Sua resistência sobe para ori-calco vermelho, e possui duas habilidades: Ataque de asa, em que passa ar a nível místico pelas asas e dispara cortes do elemento contra os alvos com efeito de contador — 1.000 cortes se o mestre for nível 1.000 — carregando magia de perfuração que ignora defesas; e Explosão de fogo, em que reúne fogo a nível místico na boca e o libera contra os alvos, abrindo-se na forma de uma estrela flamejante que avança contra os oponentes — ao acertar, o alvo recebe o efeito de queimação já iniciado em 50%, restando apenas 5 turnos antes de sofrê-lo por completo. Tem a capacidade destrutiva de meio distrito, sendo o golpe mais destrutivo da trindade.",
+        featured: true,
+      },
+    ],
+  },
+  {
+    title: "Sludge",
+    description: [
+      "\"Todos podem pegar seus poderes, mas não têm certeza se querem tocá-lo.\" Sludge é um titã grande e bípede, feito de produtos químicos e materiais gelatinosos, com coloração verde fluorescente. Diferente dos outros, não tem resistência própria, já que seu corpo mal pode ser considerado algo físico: não pode ser ferido por golpes físicos, danos de armas como espadas e lanças, ou mesmo projéteis — por isso, seu mestre fica dentro dele em vez de montado sobre ele.",
+      "Pode liberar rajadas de uma substância ácida que reside em seu corpo contra os alvos, capaz de grudar nos inimigos e corroê-los enquanto os prende, e consegue moldar seu corpo (com o mestre no interior) para passar por locais praticamente impossíveis. Pode ainda deixar sua composição extremamente inflamável, largando partes de si pelo cenário para que, ao serem tocadas pelo fogo, gerem uma cadeia de explosões — mas o mestre não é imune a elas e pode ser destruído se estiver dentro de Sludge nesse momento. Também pode se tornar uma pequena poça de gosma sobre o solo, escondendo o mestre na imensidão verde de seu corpo para prender um alvo que se aproxime, atacando-o de forma sorrateira. Passivamente, servindo como montaria, o mestre não pode ser afetado por efeitos e dano enquanto estiver montado sobre esse gigante colossal.",
+    ],
+  },
+  {
+    title: "Jolteon",
+    description: [
+      "Um pet da coleção de Eeveelutions, com pelagem amarela e pontiaguda e manchas brancas pelo corpo. Suas orelhas são grandes e pontiagudas, lembrando antenas, e sua cauda é longa e fina, com a ponta em forma de agulha. Sua resistência é de bazô dourado. Focado em velocidade e ataques diretos, possui as habilidades:",
+    ],
+    items: [
+      {
+        title: "Troca de Voltagem",
+        description: "Jolteon canaliza eletricidade mística no corpo e lança duas argolas elétricas na direção do alvo; se o alvo for atingido e não for imune ao elemento, além de sofrer o dano, Jolteon pode trocar de lugar com ele — reposicionando-se estrategicamente para escapar de situações perigosas.",
+      },
+      {
+        title: "Estática",
+        description: "Uma habilidade passiva: qualquer oponente que entrar em contato físico com Jolteon — seja por pets, invocações ou qualquer entidade que o toque diretamente — é instantaneamente paralisado, reduzindo sua velocidade pela metade até o fim da luta, missão ou evento, e impedindo-o de receber buffs de aceleração. Ataques à distância ou magias espaciais não são afetados por essa passiva.",
+      },
+    ],
+  },
+]

@@ -1,3 +1,5 @@
+@import "tailwindcss";
+
 /* Ativa a transição suave entre páginas (View Transitions de documento cruzado) em navegadores
    com suporte — o conteúdo da página atual esmaece enquanto o da próxima entra, em vez da troca
    abrupta padrão. Ignorado silenciosamente onde não há suporte (a navegação continua normal). */
@@ -5,9 +7,12 @@
     navigation: auto;
 }
 
-/* Variáveis do tema de cores: paleta padrão (dia) — dourado sobre fundo quase preto */
+/* Variáveis do tema de cores: paleta padrão (dia) — dourado sobre fundo quase preto.
+   O next-themes escreve data-theme="day" explicitamente no <html>, por isso o seletor
+   cobre tanto :root (fallback sem atributo) quanto :root[data-theme="day"]. */
 /* color-scheme avisa o navegador a usar controles nativos (barra de rolagem, etc.) escuros, em vez de seguir o SO */
-:root {
+:root,
+:root[data-theme="day"] {
     color-scheme: dark;
     --accent: #d4af37;
     --accent-rgb: 212, 175, 55;
@@ -48,7 +53,7 @@
     padding: 0;
     box-sizing: border-box;
     list-style: none;
-    font-family: "Montserrat", sans-serif;
+    font-family: var(--font-montserrat), sans-serif;
 }
 
 /* Cor base do texto da página, reage às mudanças de tema */
@@ -61,10 +66,11 @@ body {
 
 /* Cabeçalho fixo: fundo escuro fixo (nao muda com o tema) para o texto claro continuar legivel tanto sobre as fotos quanto sobre o conteudo, nos dois temas.
    --header-blur-progress vai de 0 (topo da pagina, hero visivel atras, sem embacado) a 1 (embacado
-   total, igual ao valor fixo de antes) — quem controla esse valor durante a rolagem e o header-blur.js,
-   que escreve a variavel no :root. O fallback do var() abaixo (nao uma declaracao fixa aqui no header)
-   e o que garante 1 (embacado total, comportamento anterior) em paginas sem rolagem, como a index.html —
-   uma declaracao direta nesta regra sobrescreveria sempre o valor herdado do :root, mesmo com JS rodando. */
+   total, igual ao valor fixo de antes) — quem controla esse valor durante a rolagem e o hook
+   useHeaderBlurProgress, que escreve a variavel no :root. O fallback do var() abaixo (nao uma
+   declaracao fixa aqui no header) e o que garante 1 (embacado total, comportamento anterior) em
+   paginas sem rolagem, como a landing — uma declaracao direta nesta regra sobrescreveria sempre
+   o valor herdado do :root, mesmo com JS rodando. */
 header {
     position: fixed;
     width: 100vw;
@@ -81,9 +87,11 @@ header {
     -webkit-backdrop-filter: blur(calc(var(--header-blur-progress, 1) * 10px));
 }
 
-/* Nas páginas com barra de rolagem customizada, desconta os 10px dela pro desfoque do cabeçalho não vazar por cima */
-body:has(.container.scrollable) header {
-    width: calc(100vw - 10px);
+/* Nas páginas com barra de rolagem customizada, desconta o espaço real dela (medido por
+   useScrollbarGutter) pro desfoque do cabeçalho não vazar por cima. No mobile a barra é
+   overlay (0px reservado), então o header ocupa a largura cheia da tela normalmente. */
+body:has(.rpg-shell.scrollable) header {
+    width: calc(100vw - var(--scrollbar-gutter, 0px));
 }
 
 /* Bloco do logo/título do site no cabeçalho — sempre claro, independente do tema, pois fica sobre a barra escura fixa do cabeçalho */
@@ -91,7 +99,7 @@ body:has(.container.scrollable) header {
     display: flex;
     align-items: center;
     gap: 12px;
-    font-family: "MedievalSharp", cursive;
+    font-family: var(--font-medieval), cursive;
     font-size: 24px;
     font-weight: 900;
     color: #ffffff;
@@ -122,7 +130,6 @@ header nav ul li {
     cursor: pointer;
     position: relative;
     padding: 5px 0;
-
 }
 
 /* Sublinhado animado que se expande sob o link do menu ao passar o mouse (ou fica fixo no link da página atual) */
@@ -186,8 +193,11 @@ header nav ul li:has(a.active-nav)::after {
     display: block;
 }
 
-/* Gradiente de fundo principal da página, usado como camada base atrás da imagem fixa */
-.container {
+/* Gradiente de fundo principal da página, usado como camada base atrás da imagem fixa.
+   Nomeado .rpg-shell (nao .container) para nao colidir com a classe utilitaria .container
+   embutida do Tailwind v4, que aplica max-width responsivo + centralizacao automatica e
+   quebrava o layout (o container ficava mais estreito que a hero-image fixa atras dele). */
+.rpg-shell {
     height: 100vh;
     position: relative;
     background: linear-gradient(135deg, var(--bg-1) 0%, var(--bg-2) 50%, var(--bg-3) 100%);
@@ -218,53 +228,12 @@ header nav ul li a.active-nav {
     align-items: center;
 }
 
-/* Layout centralizado usado por páginas ainda sem conteúdo completo (ex: Pets) */
-.content-page {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    height: 50vh;
-    text-align: center;
-    padding: 20px;
-}
-
-.content-page h1 {
-    font-family: "MedievalSharp", cursive;
-    font-size: 48px;
-    color: var(--text-primary);
-    text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.7);
-    margin-bottom: 20px;
-}
-
-.content-page p {
-    font-size: 18px;
-    color: var(--text-secondary);
-    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
-}
-
-/* Caixa de card estilo "Em breve" */
-.placeholder-card {
-    background: var(--card-tint);
-    border: 1px solid rgba(var(--accent-rgb), 0.3);
-    border-radius: 18px;
-    padding: 50px 60px;
-    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.28), inset 0 1px 0 rgba(255, 255, 255, 0.06);
-}
-
-.placeholder-icon {
-    display: block;
-    font-size: 48px;
-    margin-bottom: 16px;
-    filter: drop-shadow(0 0 12px rgba(var(--accent-rgb), 0.5));
-}
-
 /* Permite que páginas de conteúdo longas (Itens, Biológico, etc.) rolem dentro do container de altura fixa.
    isolation:isolate cria um contexto de composicao proprio pra esse container — em algumas versoes do
    Chrome, o backdrop-filter do .page-content (filho) faz o navegador ignorar a cor customizada da barra
    de rolagem e usar a cor de destaque do Windows; isolar o container ajuda o Chrome a manter o tema
    customizado nesses casos. */
-.container.scrollable {
+.rpg-shell.scrollable {
     overflow-y: auto;
     overflow-x: hidden;
     isolation: isolate;
@@ -273,15 +242,15 @@ header nav ul li a.active-nav {
 }
 
 /* Barra de rolagem customizada (Chrome/Edge/Safari) pra seguir a paleta do site em vez do padrão do sistema operacional */
-.container.scrollable::-webkit-scrollbar {
+.rpg-shell.scrollable::-webkit-scrollbar {
     width: 10px;
 }
 
-.container.scrollable::-webkit-scrollbar-track {
+.rpg-shell.scrollable::-webkit-scrollbar-track {
     background: transparent;
 }
 
-.container.scrollable::-webkit-scrollbar-thumb {
+.rpg-shell.scrollable::-webkit-scrollbar-thumb {
     background-color: rgba(var(--accent-rgb), 0.6);
     border-radius: 10px;
 }
@@ -351,7 +320,7 @@ header nav ul li a.active-nav {
 }
 
 .items-page h1 {
-    font-family: "MedievalSharp", cursive;
+    font-family: var(--font-medieval), cursive;
     font-size: 48px;
     text-align: center;
     text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.7);
@@ -386,7 +355,7 @@ header nav ul li a.active-nav {
 }
 
 .package-title {
-    font-family: "MedievalSharp", cursive;
+    font-family: var(--font-medieval), cursive;
     font-size: 28px;
     color: var(--text-primary);
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
@@ -430,7 +399,7 @@ header nav ul li a.active-nav {
 }
 
 .sub-item h3 {
-    font-family: "MedievalSharp", cursive;
+    font-family: var(--font-medieval), cursive;
     font-size: 20px;
     color: var(--accent);
     margin-bottom: 8px;
@@ -451,7 +420,7 @@ header nav ul li a.active-nav {
     color: var(--accent-light);
 }
 
-/* Estado inicial dos cards antes de entrarem na tela (scroll-reveal.js adiciona/troca as classes) */
+/* Estado inicial dos cards antes de entrarem na tela (useScrollReveal adiciona/troca as classes) */
 .reveal-pending {
     opacity: 0;
     transform: translateY(24px);
@@ -500,12 +469,14 @@ header nav ul li a.active-nav {
 }
 
 /* Imagem hero fixa: permanece presa na tela enquanto o conteúdo rola por cima */
-/* Largura desconta os 10px da barra de rolagem customizada, pra ela nao pintar por cima da barra */
+/* Largura desconta o espaço real da barra de rolagem customizada (medido por useScrollbarGutter),
+   pra ela nao pintar por cima da barra. No mobile a barra e overlay (0px), entao a hero ocupa
+   a largura cheia da tela em vez de sobrar uma faixa vazia de 10px na borda direita. */
 .hero {
     position: fixed;
     top: 0;
     left: 0;
-    width: calc(100% - 10px);
+    width: calc(100% - var(--scrollbar-gutter, 0px));
     z-index: 0;
 }
 
@@ -520,6 +491,9 @@ header nav ul li a.active-nav {
     flex: 1 1 50%;
     height: 100%;
     overflow: hidden;
+    /* position:relative ancora o <Image fill> do next/image (que se posiciona absolute
+       em relacao ao ancestral posicionado mais proximo) sem alterar o layout em si. */
+    position: relative;
 }
 
 .landing-image img {
@@ -553,6 +527,8 @@ header nav ul li a.active-nav {
     width: 100%;
     height: 100vh;
     overflow: hidden;
+    /* position:relative ancora o <Image fill> do next/image, mesmo motivo de .landing-image acima. */
+    position: relative;
 }
 
 .hero-image img {
@@ -597,7 +573,7 @@ header nav ul li a.active-nav {
 }
 
 .hero-name {
-    font-family: "MedievalSharp", cursive;
+    font-family: var(--font-medieval), cursive;
     font-size: 42px;
     line-height: 1.1;
     color: #ffffff;

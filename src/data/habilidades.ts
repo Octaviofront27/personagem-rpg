@@ -1,0 +1,262 @@
+import { ItemPackage } from '@/types/content'
+
+export const habilidades: ItemPackage[] = [
+  {
+    title: 'Arayashiki',
+    description: [
+      'Habilidade relacionada aos slots cósmicos do Jace. São cinco criados, porém, tem o poder de 15 slots por conta das raças.',
+      'O Arayashiki é uma habilidade bastante ampla, seu nome está relacionado a um pseudo oitavo sentido, um que transparece o sentido mágico. Então suas habilidades seriam possíveis serem usadas até sem magia, por conta da raça cósmica de Jace, mas claro, com o poder 1/3 reduzido e sem muito controle.',
+      'O cosmo é a força que criou os astros e a partir dele o universo foi construído, sendo teoricamente o primeiro elemento, embora seja tão difícil de tê-lo. O Arayashiki é o sentido cósmico, relacionado a esse tipo de poder primitivo que pode ser utilizado em forma destrutiva, mas também, para cura. "nada surge pelo acaso, tudo se modifica e se transforma", levando esse pensamento em questão o cosmo pode ser utilizado em seu estado mais puro, mas também, pode ser utilizado pela sua queima, tornando cinzas cósmicas, estas são o cosmo solidificado e concentrado, o toque em pessoas pode causar dois efeitos. A absorção cósmica que absorve todo o cosmo do oponente, para a fonte de cosmo mais poderosa do recinto (com o maior número de slots). O segundo efeito é a pulverização cósmica que acontece quando todo o cosmo for sugado ou quando a pessoa simplesmente não possui magia cósmica. Essa pessoa literalmente se torna o cosmo, não a magia em si, mas ela retorna a ser o que ela era antes, apena um ponto no vasto cosmo do universo, primitivo e inexistente.',
+      'Esta é a forma mais bruta do cosmo, ele tem diversas formas por conta de sua enorme versatilidade, então para ter o menor número de arrodeios, ele está dividido em três partes.',
+    ],
+    items: [
+      {
+        title: 'Indra',
+        description:
+          'A forma Indra do cosmo é relacionado ao lado destrutivo, as providências divinas nas lendas antigas são caracterizadas como cataclismas que destrói os ambientes, por um bem maior. Esse cosmo pode ser mostrado como canhões luminosos, representações animalescas ou até mesmo coisas físicas como rochas gigantescas. A Indra é a força punitiva universal, mas acima de tudo, pode ser caracterizada de diversas formas, então nela, nem tudo o que se vê é como realmente é. A ligação com Indra permite Jace criar basicamente qualquer evento cósmico, como: Buracos negros, meteoros, Buracos brancos, explosões de átomos e etc, mas a beleza principal é a conversão desses poderes através do corpo de Jace.',
+      },
+      {
+        title: 'Acala',
+        description:
+          'O Acala é a versão do cosmo mais pacificadora, voltado ao suporte e defesa, porém, suas técnicas geralmente usam a igualdade entre os oponentes, claro, quando é conveniente a Jace.',
+      },
+      {
+        title: 'Primeiro caminho',
+        description:
+          'O primeiro caminho do Acala é o caminho da transparência. O cosmo Acala tem a habilidade de deixar qualquer coisa invisível, mas combinada com os olhos de Caim de Jace, o permite ver qualquer coisa, se tornando o Shinjitsu, que significa verdade. O Shinjitsu permite a Jace enxergar qualquer coisa que o inimigo oculte ou que naturalmente não pode ser visto, desde aos sentimentos, ou até mesmo a magia.',
+      },
+      {
+        title: 'Segundo Caminho',
+        description:
+          'O caminho da defesa, permite o usuário criar superfícies cósmicas duras suficiente para não ser penetrada por magias despertadas, porém ela pode ser flexível e maleável como tecido. Ambas defesas podem ser utilizadas de duas formas: Refletir como o nome diz, capaz de refletir qualquer magia contra o inimigo, com a soma dos slots cósmicos de Jace. Caso a magia seja mais poderosa em números de slots, essa pode quebrar a defesa, porém, a sua força é cortada na metade. Absorver o cosmo pode simplesmente absorver o poder utilizado pelo oponente, assim, transformando essa energia em cosmo, aumentando o poder do usuário com a força do oponente.',
+      },
+      {
+        title: 'Terceiro Caminho',
+        description:
+          'O terceiro caminho relacionado com a igualdade, esta da ao usuário a habilidade de quebrar debuffs que o inimigo implante nele (com o número de slots maior), mas não apenas isso, após o contato direto, essa quebra o efeito de qualquer buff que o oponente possa ter, mesmo este sendo mágico, físico ou por item, afinal, o buff só funciona caso o oponente também buffe o usuário.',
+      },
+      {
+        title: 'Quarto Caminho',
+        description:
+          'O caminho do espaço, capaz de modificar a natureza das superfícies, mais ainda o espaço. Não é magia espacial, Jace cria buracos de minhoca minúsculos, capazes de teleportar ou alterar a trajetória das coisa ao seu redor. Tais buracos de minhoca são invisíveis e sem massa, então, é muito difícil um inimigo precisar onde os buracos de minhoca estão. Jace com esse caminho pode alterar a gravidade, mas mais ainda, pode mudar a massa das coisas, deixando mais leves, ou mais pesadas, como também compactuar as partículas, diminuindo ou acelerando a velocidade.',
+      },
+      {
+        title: 'Ashura',
+        description:
+          'O Ashura, o mais poderoso e destrutivo tipo de cosmo. É a técnica caótica, capaz de causar ataques tão destruídos que não podem ser quantificados quanto mais fazes Jace utiliza técnicas cósmicas, mais poderosa ela fica.',
+      },
+    ],
+  },
+  {
+    title: 'Jogos Demoníacos',
+    items: [
+      {
+        title: 'Yuripe',
+        description:
+          'Quando esse sinal for dado, a pessoa em campo com menos mana emanado é a vencedora, o derrotado tem que cortar seus próprios pulsos com perfurar o seu canto vital pela arma que o vencedor escolher.',
+      },
+      {
+        title: 'Otonagashi',
+        description:
+          'Quando essa palavra é dita, a pessoa que estiver em uma altura maior que a do inimigo ganha. Sua massa aumenta dez vezes e o inimigo se mantém paralisado, sem se mover... ele é obrigado a levar o golpe do vencedor.',
+      },
+      {
+        title: 'ThankerBelliun',
+        description:
+          'Quem estiver com mais armas nas mãos é o vencedor, o derrotado não pode usar itens até o final da luta, os itens/armas que o mesmo estiver em contato, perde suas propriedades mágicas e sua resistência se tornando metal comum.',
+      },
+      {
+        title: 'damnare umbra',
+        description:
+          'O vencedor é aquele que terá o maior número de dedos apontados na direção do inimigo, o derrotado terá sua sombra desvencilhada do seu corpo. Sim, é uma magia que afeta a sombra do oponente, não ele em si. Caso a sombra se separa, ela leva metade da energia e habilidades do inimigo, caso o mesmo tenha defesa para impedir esse nerf, a sombra simplesmente cópia sua energia assim ficando com o mesmo percentual de magia do inimigo no seu estado atual, em seguida, começa uma luta entre os dois. Seus itens também são copiados se tornando armas negras. A sombra não tem consciência nem sentidos. Ela apenas segue o ideal do seu mestre e luta contra o seu inimigo.',
+      },
+      {
+        title: 'humanum destruatur',
+        description:
+          'O vencedor é definido através do número de raças que os participantes tem. Quem tiver mais raças é derrotado e ele perde tudo dela se tornando um ser sem raça. Toda a queda de poder equivale pelo aumento de poder do vencedor.',
+      },
+      {
+        title: 'fluxus magicae',
+        description:
+          'O fluxo mágico da magia se modifica no corpo dependendo da habilidade usada, este jogo está relacionado a isso. O personagem vencedor tem o direito de desestabilizar três fluxos de magia diferente do inimigo. Exemplo: Elementar, Cosmologia, magia de anulação. O inimigo não pode usar este tipo de magia por três rodadas, sendo passiva ou sendo usada atras de item, sendo que esse item é alimentado magicamente pela pessoa ele também é afetado. Como o vencedor é decidido? Simples, o primeiro que falar o nome do jogo e falar seu nome completo ao contrário será o vitorioso. Ele também não precisa falar os nomes das magias canceladas, ele só tem que pensar nelas.',
+      },
+      {
+        title: 'Absoluta daemonium',
+        description:
+          'Este é o efeito secundário dos jogos demoníacos. Quando o jogo declara Jace o vitorioso, ele adquiri o modo demônio absoluto... sua aura demônio sobrepõe a sua aura dragão assim fazendo ambas entrarem em sincronia e se fundirem em algo novo, porém, a parte dragão não fica visível a olho nu, apenas a aura demônio. Sua cabeça fica cheia de pensamentos assassinos e sanguinolentos assim fazendo a pessoa que tente controlar seus pensamentos em um estado de loucura momentâneo... suas capacidades físicas aumentam em 500 vezes e suas habilidades mágicas adquiram características negras. Exemplo: Pirocinese se torna pirocinese negra, o gelo se torna vinho... mais duro, e caso entre em contato com o inimigo, o mesmo entra em um leve pesadelo, coisa simples, apenas para distraí-lo momentaneamente. Pq essa magia afeta apenas Jace caso ele seja o ganhador? Simples, a aura de Jace que fez os jogos, ele criou as regras, então a vitória vai alimenta a parte demônio de Jace que nunca foi totalmente explorada... até agora.',
+      },
+    ],
+  },
+  {
+    title: 'Retranca do Rei',
+    description: [
+      'Jace tem a habilidade de usar suas armas livremente, mesmo que elas não estejam em contato direto com ele, Jace consegue o controle total delas, podendo se tele portar através das espadas, as usando como marcador, ou até mesmo as tele portando as lâminas para diversos cantos, até mesmo para dentro dos inimigos. A Retranca do rei é uma habilidade especial criada por esses slots, assim, as utilizando como um domo defensivo, resistente a altos impactos (dependendo do material das lâminas).',
+    ],
+  },
+  {
+    title: 'Electrocinesia',
+    description: [
+      'A criação e manipulação de eletricidade, esta por muito tempo foi a magia cargo chefe de Jace, mas agora de uma maneira diferente. O corpo de Jace se torna uma bateria ambulante, o permitindo comer eletricidade (desde que não seja de um nível de magia que ele não possa controlar), assim, absorvendo essa eletricidade e ganhando em poder.',
+    ],
+    items: [
+      {
+        title: 'Balmung',
+        description:
+          'Balmung é nada mais nada menos que um enorme feixe de eletricidade, palpável como plasma, tendo uma consistência praticamente sólida. Balmung é um corte vertical de eletricidade que pode causar uma grande explosão cortando uma cadeia de montanhas facilmente, mas não apenas isso, ao se chocar contra o chão, ela explode como se fosse uma bomba de raios, obliterando tudo em um raio de um quilômetro (magia comum).',
+      },
+      {
+        title: 'Bararaq Saiqa',
+        description:
+          'Muito semelhante a Balmung, mas este é um golpe reto, como se fosse um canhão elétrico. Não apenas penetrante, mas também explosivo, capaz de destruir vales inteiros e mudar o ecossistema a sua volta, ao contato com o feixe super rápido (mais rápido que o som) o oponente é paralisado, ao contato com metal, esse conduz uma forte conexão magnética, capaz de grudar tudo o que é do inimigo no corpo, o deixando com a mobilidade reduzida.',
+      },
+      {
+        title: 'Compreensão de pulsos elétricos',
+        description:
+          'Essa habilidade permite a Jace a analisar cada pulso elétrico, tal poder é maximizado pelos olhos de Caim, assim, permitindo Jace visualizar os movimentos dos seus oponentes enquanto eles ainda estão pensando em executá-los, uma técnica usada a muito tempo pelo mesmo, o trazendo de uma forma nova, mas com o mesmo intuito.',
+      },
+      {
+        title: 'Shiden',
+        description:
+          'Shiden não é uma outra técnica com eletricidade, este é um tipo de eletricidade, sendo o raio negro, mas não tem essa coloração. O raio negro existe no meio ambiente, sem cor, não é visível e o mesmo tem uma potência muito maior que os raios comuns. Ele irradia raios gama, ao contato com os oponentes, este corroe todo o DNA do oponente, o fazendo morrer de dento para fora. Apenas o contato indireto com o raio negro já causa um efeito nas células, principalmente as que ficam no olfato, fazendo o nariz sangrar incondicionalmente. O raio negro é 50.000 vezes mais poderoso que o raio comum, Jace pode usufruir disso, tornas o suas habilidades com este raio, sendo um elemento invisível, sem cheiro e sem barulho algum no espaço. É possível apenas sentir o calor emanado por este, que se equivale ao sol.',
+      },
+    ],
+  },
+  {
+    title: 'Criocinese',
+    description: [
+      'Jace tem um espirito habitando dentro dele, seu nome é Valefor, a raposa. Graças a esse espirito, Jace ganha a habilidade de usar o gelo ao seu favor, lhe concedendo o domínio da matéria, removendo energia cinética dela.',
+    ],
+    items: [
+      {
+        title: 'Sarcófago de Gelo',
+        description:
+          'Essa habilidade da a Jace a capacidade de congelar totalmente os átomos ao redor do seu oponente em uma velocidade extrema. Prendendo então o oponente em uma espécie de caixão de gelo, assim, sofrendo os efeitos passivos da Estagnação.',
+      },
+      {
+        title: 'Estagnação',
+        description:
+          'A estagnação é uma habilidade passiva do gelo de Jace. Dificilmente sentia para as pessoas menos experientes que Jace, a estagnação congela o ambiente ao redor do oponente, mas o mesmo não percebe, por conta das propriedades congelantes dessa magia, capaz de congelar até mesmo o abstrato, como sentimentos, noção do tempo e até mesmo a magia do inimigo, tornando o sarcófago também uma habilidade de selamento.',
+      },
+    ],
+  },
+  {
+    title: 'Sacred Breath',
+    description: [
+      'Essa habilidade tem apenas um slot clássico, mas esse slot tem poder de seis, então, suas habilidades serão poderosas nesse nível.',
+    ],
+    items: [
+      {
+        title: 'Sacred Weapons',
+        description:
+          'Jace utiliza da sua magia sagrada para revestir suas armas, podendo utilizar elas com efeitos diferentes, mas inteiramente poderosos.',
+      },
+      {
+        title: 'Sword Sacred',
+        description:
+          'A espada sagrada, também nomeada como Excalibur, extrai do inimigo toda a sua vontade de lutar, lhe enfraquecendo em 10% a cada corte efetuado, tal técnica pode ser usada por Jace sempre que ele quiser, além de que cada golpe que atinge o oponente, acrescenta a cura de Jace em 10% por tempo indeterminado.',
+      },
+      {
+        title: 'Holy Knight',
+        description:
+          'Esta técnica é usada por Jace usando toda sua pericia com o elemento Sagrado. Graças a Sacred Breath, Jace literalmente respira seu elemento, o fazendo fluir por todo o seu corpo e assim, desfazendo qualquer debuff de personagens inferiores a ele, ou até mesmo do mesmo level, ou seja, tal técnica consegue ignorar os debuffs sofridos pelas próprias técnicas do usuário, o permitindo utilizar por tempo indeterminado qualquer técnica que exija do seu corpo. O Holy Knight é uma segunda etapa de tal técnica que faz uma espécie de armadura sagrada cobrir Jace, o tornando literalmente um cavaleiro. Tal habilidade permite Jace exceder os seus limites corporais enquanto ativada, mas também o permite usar uma nova técnica chamada de Rhongomyniad.',
+      },
+      {
+        title: 'Rhongomyniad',
+        description:
+          'A lança de Jace se torna um turbilhão de magia sagrada. Tal técnica é extremamente poderosa, utilizando da força física de Jace pode se mover por um distrito em segundos. Ela absorve para si as propriedades do minério usado, necessariamente não precisando ser uma lança. Ela não dá apenas dano, ela devolve para o oponente todos os efeitos do debuff que a Sacred Breath segurou.',
+      },
+    ],
+  },
+  {
+    title: 'Olhos de Caim',
+    description: [
+      'Os olhos de Caim estão ligados literalmente com o espirito de Jace, o permitindo não morrer, mesmo depois de morrer. Graças ao espirito de Belial, um ser que vive dentro de Jace, assim como Valefor. Belial permite Jace transferir sua essência para objetos, assim, o permitindo voltar a vida após perder seu corpo. Sempre que Jace volta a vida, ele ganha um Buff em todos os aspectos, o permitindo usar de maneira natural sem se desgastar.',
+      'Tabela: Primeira morte: 10X mais forte. Segunda morte: 100X mais forte que a última vez que morreu. Terceira morte: 1.000X mais forte que a última vez que morreu. Quarta morte: 10.000X mais forte que a última vez que morreu. Quinta morte: 100.000X mais forte que a última vez que morreu. Sexta morte: 1.000.000X mais forte que a última vez que morreu. Sétima morte: 10.000.000X mais forte que a última vez que morreu.',
+    ],
+    items: [
+      {
+        title: 'Olhos de Caim',
+        description:
+          'Os olhos de caim conecta o Jace com os planos (cinco slots), permitindo Jace ver tudo ao seu redor, através do espaço ao seu redor, podendo ter até acesso ao mundo quântico, mas também, a própria magia no corpo dos oponentes, podendo assim a visualizar antes mesmo do inimigo usar.',
+      },
+      {
+        title: 'Olho do passado',
+        description:
+          'Os olhos de caim permite que o Jace interprete o ambiente visualizando a magia. Nossa realidade é composta pela mesma, então em todos os locais que habitam nosso mundo tem magia. Assim, Jace consegue visualizar através dessa magia no ar os acontecimentos que aconteceram no passado no local.',
+      },
+      {
+        title: "Sussano'o",
+        description:
+          'Essa magia é a materialização de magia de Jace, literalmente fazendo um constructo de sua mana, assim, podendo variar de tamanho e de forma, mas geralmente é azul. Jace pode usar essa mana para fazer constructos, ou até mesmo fazer membros improvisados para si, assim como também pode assimilar suas magias.',
+      },
+      {
+        title: 'Belial',
+        description:
+          'Belial é o ápice do poder de Jace, em primeiro caso, nesse modo, o poder dos olhos de caim quadruplicam de poder, assim, o permitindo visualizar com mais clareza tudo ao seu redor, mas agora, o permitindo acessar a mente do oponente (caso esse tenha o lvl inferior ao de Jace) e a partir disso criar ilusões afim de desestabilizar o oponente, ou até mesmo o desorientar na batalha.',
+      },
+      {
+        title: 'Ghostly Hands',
+        description:
+          'Essa técnica permite Belial utilizar mãos fantasmas, invisíveis para os planos, exceto pelo plano dos espíritos. Essas mãos tem o mesmo poder das mãos de Jace, em questão de força e velocidade.',
+      },
+      {
+        title: 'Belior Goldoreza',
+        description:
+          'Essa sendo a foice que Belial carrega, feita inteiramente de ossos, está não é palpável, apesar de não aparentar isso. Seu poder consiste em ceifar a alma do oponente, pedaço por pedaço, removendo sua essência do local acertado, tirando sua sensibilidade do local, mas também, sua magia. Tal essência é lançada em uma dimensão a parte de Jace, mas, caso ele queira, ele pode simplesmente destruir a alma.',
+      },
+      {
+        title: 'Belior Zauto',
+        description:
+          'Essa técnica permite ao usuário criar um circulo de oito pontas no céu, o permitindo invocar de sua dimensão espiritual um enorme dragão feito de ossos, este que tem o poder de ao rugir, remover a alma do oponente, a engolindo e destruindo, deixando o corpo do oponente em branco, sem os sentidos e com os pontos de magia bloqueados.',
+      },
+    ],
+  },
+  {
+    title: 'Magia de som',
+    description: [
+      'Este slot é relacionado aos cinco slots de som dados pela armadura de Wyvern.',
+      'O som é a propagação de ondas mecânicas através da matéria, geralmente nossos ouvidos conseguem detectar, mas nem sempre isso é possível. O som não é apenas o barulho em si, sua forma mais bruta é a vibração na matéria, independente da estrutura.',
+      'A magia de som de Jace pode ser usada de maneiras variadas, nenhuma delas é de dano direto e sim indireto.',
+    ],
+    items: [
+      {
+        title: 'Total control',
+        description:
+          'As palavras de Jace transmitem magia, o som dos seus movimentos podem afetar qualquer um de lvl inferior a ele (levando em consideração como magia normal). Jace com comandos pode controlar o inimigo, mesmo este sem perceber. As vibrações sonoras invadem o corpo do inimigo, mesmo surdo ou com as orelhas tampadas, o mais importante desse movimento é o contato físico com o corpo do inimigo, mesmo indiretamente. Cada palavra tem uma vibração diferente, e ao entrar em contato com o oponente, este é pego no golpe.',
+      },
+      {
+        title: 'Dragão Carmesim',
+        description:
+          'O Dragão Carmesim é nada mais nada menos que a vibração altamente aguda em forma de dragão. A matéria agita tão rapidamente que chega a se moldar e até mesmo ter cor. O dragão Carmesim. Ele tem dois movimentos interessantes. O primeiro é quando ele explode no ar, os átomos entram em uma aquecimento nuclear abrupto, tornando o ambiente extremamente instável. A explosão faz os átomos do ambiente tentarem se equilibrar assim, fazendo o atrito da matéria ficar ainda maior, ou seja, a movimentação do ambiente fica extremamente difícil. O atrito com o corpo dos inimigos deixa o ambiente impossível para locomoção, além de absorver enegrecida cinética do corpo do inimigo, ou seja, atrapalha até mesmo habilidades de teleporte. A segunda forma do dragão é algo mais direto. Ele pode atravessar qualquer superfície sólida por ser pouco tangível, mas não apenas isso, mesmo parado, o impacto das vibrações que ele causa é capaz de fazer desabar um distrito, mesmo com uma armadura protegendo, as vibrações fisicamente transmite ao usuário da armadura, causando um "terremoto interno".',
+      },
+      {
+        title: 'Hakugeki',
+        description:
+          'Essa é a passiva dessa magia, ela permite Jace se alimentar de som, independente da sua natureza (mágica ou física), mas as duas o revigoram de maneira diferente. Ou seja, até mesmo ondas de choques podem revigorar o rapaz.',
+      },
+    ],
+  },
+  {
+    title: 'Hidrocinese',
+    description: [
+      'A Hidrocinese é uma magia elementar clássica, mas suas fraqueza com o decorrer dos anos deixou menos adeptos dela. Graças aos slots dados pela armadura de dragão marinho, Jace consegue usar esta magia no ápice das magias comuns (cinco slots), o permitindo usar de forma convencional, mas também em uma nova forma criada por Jace.',
+    ],
+    items: [
+      {
+        title: 'Ryūsui Gansai-ken',
+        description:
+          'Essa habilidade está muito além da compreensão visual, Jace com a ponta dos dedos consegue mover as partículas de água no ambiente, as agrupando em seu estado de vapor e mudando a densidade no ambiente a sua volta, bloqueando assim que oponentes de movam livremente pelo campo, porém, permite ao oponente ser mais veloz, afinal não é uma técnica que bloqueia esquivas, ela deixa sempre um ponto para o inimigo escapar com facilidade e sempre que ele tenta escapar por um lado errado, as partículas de água em alta concentração deslocam o oponente para o lado livre. Apenas Jace consegue ter a visão dessa habilidade, afinal, ela converte a atmosfera a nível subatômico, então apenas com os olhos de Caim, Jace pode enxergar essa técnica totalmente. Nesse modo de luta, Jace consegue usufruir do máximo de sua velocidade, deixando seus golpes mais rápidos e a cada soco, sua força física cresce dobrando equivalente ao golpe anterior.',
+      },
+      {
+        title: 'Mizu no Kokyū-hō',
+        description:
+          'Esta sendo uma técnica passiva, que permite Jace absorver partículas de água do ambiente, não apenas as usando para combate, mas as usando para regeneração e também prolongamento de vigor, assim, Jace usa seu próprio estilo de luta para manter seu corpo lutando por horas e horas. Obviamente, esta habilidade também dá a Jace o privilégio de respirar de baixo d\'água, além de converter o elemento provindo da natureza ou de outros para si em forma de magia.',
+      },
+      {
+        title: 'Snatch',
+        description:
+          'Outra das habilidades do elemento água de Jace. Esta habilidade permite que Jace agite as partículas de água ao redor do inimigo com tanta velocidade e pode causar uma explosão, fazendo vapor se condensar no ambiente. Aquele vapor em contato com a pele do ambiente é capaz de sugar a água do corpo do adversário, assim diminuindo suas habilidades físicas a cada turno que ele ficar ali dentro. Esta habilidade causa um debuff de 20% por turno.',
+      },
+    ],
+  },
+]

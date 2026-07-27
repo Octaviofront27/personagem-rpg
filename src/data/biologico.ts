@@ -1,0 +1,406 @@
+import { ItemPackage } from '@/types/content'
+
+export const biologico: ItemPackage[] = [
+  {
+    title: "Uo Uo no Mi",
+    description: [
+      "Um baú belo e de tamanho mediano, sendo decorado com escamas bem afiadas fazendo ser até difícil o segurar, esse ao ser aberto possui algumas coisas em seu interior: um pacote, onde o usuário acha 200k para si, e uma clava bárbara, uma clava grande de bazô com espinhos afiados que possui uma habilidade sendo ela a destruição dos trigramas, onde o usuário move a arma fazendo assim um corte de magia pura a nível despertado contra o alvo para o cortar ou lhe repelir com enorme força!",
+      "Dentro do baú ainda outro pertence misterioso se encontrava, envolto em toalhas de pano para proteger o bem de avarias dentro do baú de escamas afiadas, e ao retirá-las o oculto se revela: a Uo Uo no mi (Fruta do dragão), uma grande fruta azulada com escamas afiadas difíceis de serem comidas! Akuma no mi é o nome desse tipo de fruta cultivada por Sedah para dar ao usuário poderes incríveis sendo biológicos, a fraqueza dessas frutas é o clássico prata enegrecida e o mar que anula os poderes dos usuários que caírem dentro dele!",
+      "Agora sobre a Uo Uo no mi, ao comê-la o usuário ganha a capacidade de se tornar um dragão chinês enorme, com escamas de ori-Calco azul, imponente e perigoso! Por ser um dragão sua força é notável e possui algumas habilidades como:",
+    ],
+    items: [
+      {
+        title: "Bafo de dragão",
+        description: "O usuário canaliza chamas místicas em sua boca lançando uma baforada no alvo como rajada de fogo, logo com isso essa explode ao acertar o alvo liberando um enorme incêndio no local provando sua destruição!",
+      },
+      {
+        title: "Ruína dos céus",
+        description: "Ao voar na forma dragão o mesmo faz as nuvens carregadas fecharem o céu gerando uma enorme tempestade de ar e água fazendo o clima mudar drasticamente, o poder dessa tempestade a nível místico é tão grande que pode mover e derrubar uma floresta ou uma cadeia de montanhas inteiras com a força de seus ventos!",
+      },
+      {
+        title: "Forma híbrida",
+        description: "O usuário se torna um dragão humanoide, esse ainda com resistência de ori-Calco azul, logo o mesmo sendo menor pode usar seus itens melhor e produzir tempestade e chamas de seu corpo usando as técnicas de antes agora em uma menor escala, porém esse pode dar baforadas agora também de magia de tempestade mística sendo um canhão de força da natureza! Nessa forma e na forma dragão completo o usuário ganha a imunidade a fogo e tempestade por sua vez!",
+      },
+      {
+        title: "Líder das 100 feras",
+        description: "A passiva máxima do usuário, nenhuma fera/pet ousa desafiar o senhor das feras fazendo assim esses se curvarem perante o usuário, logo na forma híbrida os pets e feras do cenário trocam a obediência de seu mestre original para o dragão fazendo esse ter o comando dos pets ao dragão! Sendo assim tanto pets quanto animais selvagens são inúteis de se usar contra esse desde que sejam de nível mortal! A obediência se mantém até o dragão sair do cenário em questão!",
+      },
+    ],
+  },
+  {
+    title: "Célula do Sedah",
+    description: [
+      "O modo como Sedah cria seus cervos é injetando seu DNA aos mesmos, geralmente por algo que o dragão louco chama de célula, uma pequena esfera cor de sangue pulsante! Existem dois tipos de cervos sendo os que treinam desde sempre junto a Sedah para fazer seu corpo conseguir suportar o poder do dragão, já o segundo modo é ingerindo acidentalmente ou forçadamente uma célula, para isso é preciso um treinamento mais delicado pois liberar seu poder de modo errado pode dar um pico de força incrível no usuário porém destruindo completamente o corpo do próprio gerando uma morte extremamente dolorosa!",
+      "Essa no caso é uma célula que se desenvolveu pelo segundo modo, injetada em Jace quando em uma missão invadiram uma das fábricas de Sedah, nessa mesma missão os Off color's foram introduzidos e se revelaram vítimas de experimentos com as células feitas por Sedah, e com a ajuda deles tanto Jace como Orochi e Natsume, os infectados com esse poder, tiveram sua célula adormecida para não correrem o risco de se deixarem destruir, Jace finalmente despertou a sua ao ser banhado pelo sangue de Sedah que estava no corpo de Acas, Natsume ainda não revelou o que pode fazer após a ajuda de Ceasar, Haizaki também possui uma célula porém ainda não lhe fez um uso, mas o ponto aqui não são esses dois e sim Jace que conseguiu despertar sua célula!",
+      "Nesse estado com a mudança de seu corpo (a escolha do player) seu físico ficou melhor além de seu poder mágico, a principal mudança ao se ter a célula de Sedah ativa em seu corpo é que o usuário se torna um ser que transcende o nível mortal estando na linha entre esse nível e o divino, logo habilidades ou efeitos que englobam em seu texto e funções \"até o nível mortal\" não podem afetar o usuário, deixando assim ele com uma vantagem sobre muitos itens ameaçadores! Outro ponto é que Jace ganha uma segunda vida, onde caso não esteja com seu modo cervo ativado esta que pode liberar quando desejar mas consome uma grande energia mental para manter tal forma, se o usuário vier a morrer, ele simplesmente renasce com sua forma já ativada, então para matar o mesmo é preciso o matar duas vezes, essa habilidade peculiar somente funciona uma vez por missão, luta ou evento, e uma bonificação, o poder da célula de Sedah é superior ao poder das valquírias sendo assim o único meio atualmente que permite que o usuário volte a vida mesmo possuindo uma, é claro que estamos falando da passiva do modo cervo!",
+      "Por fim mas não menos importante, usuários da célula têm um controle mental muito grande podendo se comunicar entre si, porém o centro de tal poder vem direto de Sedah assim podendo se comunicar com ele se necessário sendo um meio do homem zelar por suas crias, logo os Off colors lutam muito para quebrar tal vínculo! As habilidades derivadas do usuário enquanto no modo cervo evoluem para o nível místico no quesito elemental!",
+    ],
+  },
+  {
+    title: "Hito Hito no mi (modelo Buda)",
+    description: [
+      "Uma grande fruta dourada se parecendo com o formato de uma esfera cilíndrica com marcas na lateral! Akuma no mi é o nome desse tipo de fruta cultivada por Sedah para dar ao usuário poderes incríveis sendo biológicos, a fraqueza dessas frutas é o clássico prata enegrecida e o mar que anula os poderes dos usuários que caírem dentro dele!",
+      "Agora sobre a Hito Hito no mi modelo buda, o usuário ganha as habilidades de se transformar em um gigantesco ser dourado feito de bazô dourado e ouro enegrecido! Com isso, além de ser um ser atemporal e imune a magias (elementais) de nível mortal, se torna inalvejável para dano físico não podendo ser danificado na brutalidade! Pode dar tapas no ar gerando ondas de choque nos alvos com as mesmas propriedades de seu corpo, anulando magias temporais na área do alcance e magias! Sendo assim um perigoso buda que pode prejudicar e muito determinados inimigos!",
+    ],
+  },
+  {
+    title: "Valquíria Adamanto",
+    description: [
+      "Uma peça da nova coleção de armas espirituais, são armas que mantêm seladas os espíritos de valquírias em seu interior, valquírias são guerreiras poderosas criadas por uma entidade superior desde muito antigamente, portar um item que possui uma valquíria selada é se tornar um com a mesma na vida e morte, caso o usuário morra ele não pode ser revivido sob hipótese alguma!",
+      "Essa valquíria foi selada dentro do próprio comprador sendo um item 100% biológico, outra característica desses itens é que não podem ser trocados pois a conexão entre usuário e valquíria é tamanha que as habilidades da arma se adaptam para o seu portador sendo assim um item escrito pensando exclusivamente em quem lhe comprou! Agora sem enrolar mais vamos às habilidades do Adamanto!",
+    ],
+    items: [
+      {
+        title: "Soco meteoro",
+        description: "Uma vez por turno Jace pode lançar uma chuva de socos que se assemelham a meteoros contra os alvos, são banhados de ouro enegrecido flamejante anulando magia, possuem força infinita derivadas da carta a força e é um soco por nível do dragão sendo assim podendo disparar mais de 10.000 socos por turno!",
+      },
+      {
+        title: "Chute Machado",
+        description: "Uma técnica de chute usada pelo dragão, ao mirar o chute em algum alvo uma imagem de Machado negro surge no percurso do chute semelhante a um corte profundo afinal é um Machado! Tudo acertado pelo chute envelhece até se transformar em pó! Um golpe físico imbuído com o poder da ressureccion arrogante!",
+      },
+      {
+        title: "Controle muscular",
+        description: "Jace ganha com essa valquíria um controle muscular que beira a perfeição, pode ficar magro como um mendigo, gordo como um obeso, até ser o homem mais musculoso de todos incluindo de tamanho! Caso libere seus músculos ficando full gostoso eles ganham propriedades de cobre enegrecido absorvendo impactos com o próprio corpo!",
+      },
+      {
+        title: "Dança suave",
+        description: "Uma habilidade peculiar de Jace, não tem nada a ver com poder bruto ou dano e sim movimento! Jace move os pés rapidamente em meio ao solo como se estivesse sapateando acabando por aquecer o solo, então com isso o mesmo pode dar um Dash de incrível velocidade podendo quebrar a distância entre cenários, assim uma vez por turno pode viajar por cenários! Isso pode ajudar Jace a fugir ou ir ao resgate de aliados!",
+      },
+      {
+        title: "Punho mais rápido que o tempo",
+        description: "Uma das habilidades físicas mais peculiares, Jace fecha o punho canalizando magia de tempo em um brilho dourado, com isso o dragão pode socar seus alvos com tal propriedade! Os acertados acabam por ficar paralisados em meio ao tempo só podendo ser soltos caso Jace lhes toque novamente! Agora se o intuito do dragão for matar ou dar muito dano tem uma segunda habilidade em meio a essa! Jace pode, uma vez por luta, missão ou evento, disparar um soco com magia temporal imbuída com magia de distância, assim mirando em um alvo e o socando mesmo de longe! Dessa vez o intuito não é paralisar o alvo e sim gerar uma explosão para lhe dar dano domado à força infinita do jovem!",
+      },
+      {
+        title: "Forma Adamanto",
+        description: "O trunfo dessa valquíria, as outras 5 habilidades são uma brincadeira para a mesma! Nessa forma o dragão comprime os músculos de seu corpo com toda sua força, enquanto faz isso a espada mais forte lhe ajuda sendo os cacos da Orihsaza que entram em seu corpo, Jace fica magro e alto com o corpo comprimido, sua força se mantém infinita porém o mesmo agora tem uma espécie de sobrepele de bazô estilhaçado tendo os mesmos efeitos de tal minério no corpo todo! O mesmo nessa forma se torna inalvejável por golpes de ambos os tipos não podendo se ferir! Porém para se entrar nessa forma Jace deve ter usado alguma de suas habilidades anteriormente, para cada uma das 5 usadas Jace ganha 1 turno para se manter nessa forma, então pode mantê-la no máximo por 5 turnos! Depois o processo reinicia, Jace pode também usar essa forma em seu modo dragão.",
+      },
+    ],
+  },
+  {
+    title: "Ash",
+    description: [
+      "Um item da coleção de campeões da loja Drasnia, sendo de longe minha coleção favorita dentre as atuais, trata-se de um colar com seis pingentes ligados ao mesmo, quando posto no pulso do usuário o mesmo se fixa fazendo os pingentes se fundirem gerando uma espécie de marca ou tatuagem sobre a região do colar, logo o mesmo dá 6 habilidades distintas para seu usuário sendo um item e poder biológico ao mesmo tempo! Sempre que ativado para se utilizar uma das habilidades dadas pelo colar, uma pequena cantiga é tocada na mente de seu portador, sendo a do Ash:",
+      "Esse meu jeito de viver! Sei que ninguém nunca foi igual! A minha vida é fazer... O bem vencer o mal! Jornadas! Culturas! Pessoas! Amigos! Batalhas! Ressoam! Como o choque do trovão! Por cada região!",
+    ],
+    items: [
+      {
+        title: "Vendaval",
+        description: "O usuário nessa habilidade pode mover seus braços como se fossem asas, assim gerando um forte vendaval de ar a nível perdido contra seus alvos, tendo um alcance de meio distrito, podendo varrer tudo no caminho ou apenas atrapalhar a movimentação dos alvos, conseguindo reduzir a velocidade de ataques que vierem contra o alvo e possam passar pela magia perdida pela metade devido à força do vento produzido! (Dragonite)",
+      },
+      {
+        title: "Fogo fátuo",
+        description: "O usuário junta ambas as mãos à frente do corpo, assim delas gera inúmeras labaredas roxas de fogo a nível perdido, com isso o mesmo lança contra os alvos, assim caso acerte os mesmos ganham o efeito de queimação já na marca de 50%, em 5 turnos chegando a 100% causando a morte do alvo o tornando cinzas devido a ser carbonizado pelo fogo! (Gengar)",
+      },
+      {
+        title: "Aura compartilhada",
+        description: "Nessa habilidade o usuário pode se conectar com a aura de outra pessoa na qual confia muito, formando um vínculo durante a luta, missão ou evento! Assim podendo se comunicar mentalmente entre os dois, conseguindo compartilhar entre si habilidades sendo uma por turno, assim se revezando para poder cobrir melhor as fraquezas, nisso deve se escolher o vínculo logo no começo da luta, missão ou evento e não pode ser trocado depois da escolha! Caso ambos os vinculados estiverem no mesmo cenário, podem criar uma esfera da aura de ambos canalizando todas as habilidades dos envolvidos de uma só vez lançando contra os alvos visando causar uma destruição sem igual! Porém ao usar essa habilidade destrutiva o vínculo é quebrado não podendo ser feito novamente até o final da luta, missão ou evento! (Lucario)",
+      },
+      {
+        title: "Um belo cavaleiro",
+        description: "Com essa habilidade o mesmo ganha uma espada longa e um escudo elegante ambos sendo feitos de ori-calco negro, podendo serem utilizados para atacar a curta distância ou para se defender como podia! Nisso a espada possui magia de perfuração sobre sua lâmina e o escudo possui propriedades de cobre enegrecido, assim anulando impactos! Porém a real habilidade dessas armas é poder canalizar magia de eletricidade a nível perdido sobre sua espada e corpo e avançar como um meteoro em direção ao alvo visando o atravessar com a espada gerando uma explosão na parte atingida! (Sirfetch'd)",
+      },
+      {
+        title: "Presas de gelo",
+        description: "Algo simples porém bem útil, onde o usuário ganha presas gélidas de gelo a nível perdido sobre seus dentes, ao morder os alvos eles são completamente congelados nesse mesmo elemento do mesmo nível, assim podendo imobilizar ou retirar os inimigos mais problemáticos do local apenas os mordendo e assim os congelando com tal ato! (Dragovish)",
+      },
+      {
+        title: "Gigavolt Destruidor",
+        description: "A habilidade final desse item, o usuário manifesta eletricidade a nível perdido pelo seu corpo lançando rajadas desse elemento coloridas contra os alvos, nisso o mesmo pode produzir uma rajada para cada 1.000 níveis que possuir, ou seja um nível 3.000 pode lançar 3 rajadas dessas, essas perseguem os alvos até acertar os imobilizando com a eletricidade, até que depois disso geram uma explosão grande contra os alvos fazendo uma para cada rajada colorida lançada, seu poder destrutivo pode varrer um distrito em questão de tamanho! (Pikachu)",
+      },
+    ],
+  },
+  {
+    title: "Macro cosmos",
+    description: [
+      "Um item da coleção de vilões da loja Drasnia, essa sendo uma coleção equiparada com os campeões! Sendo uma marca que fica sobre o corpo do usuário tal como uma tatuagem! Sendo então um poder biológico e mágico ao mesmo tempo! Deixando o usuário repleto de memórias sobre os vilões que as compuseram, lhes dando habilidades únicas e ao mesmo tempo perigosas para todos ao redor, para eles o certo ou errado não importam e sim somente o resultado! Ao ganhar a marca um antigo é desencadeado na mente do usuário, a da Macro cosmos é:",
+      "Caro Treinador. Posso te assegurar que sou de confiança. Mas revolução é sério, máquinas na liderança. Busco ordem e progresso, não importa a circunstância. Sem, sem energia, como a humanidade avançaria? Ações valem mais do que palavras, mas nem isso resolveria. Macro Cosmos, tudo solucionado. No dia mais sombrio, eu manipulo, e cê me entrega o Eternatus!",
+      "Após tal cantiga, essa marca desencadeia algumas habilidades para seu portador sendo elas:",
+    ],
+    items: [
+      {
+        title: "Engrenagens",
+        description: "Uma habilidade peculiar, o usuário invoca engrenagens de metal a nível perdido ao seu redor as fazendo girar ao seu redor gerando atrito entre elas, essas que podem ser usadas apenas uma vez por turno, e seu intuito é apenas dobrar a velocidade atual do usuário! (Klinklang)",
+      },
+      {
+        title: "Raio metálico",
+        description: "Nessa habilidade o usuário canaliza magia de metal a nível perdido, assim disparando como uma rajada bruta dessa energia em uma reta visando perfurar enquanto gera uma explosão ao contato com o alvo! (Escavalier)",
+      },
+      {
+        title: "Garras de aço",
+        description: "Nessa habilidade o usuário manifesta garras feitas de metal a nível perdido em suas mãos podendo desferir cortes nos alvos fisicamente ou lançar esses cortes a longa distância visando uma luta mais estratégica, essas garras podem se estender e crescer pelo tamanho que o usuário desejar! (Perrserker)",
+      },
+      {
+        title: "Tromba indiana",
+        description: "Nessa habilidade o usuário manifesta um grande elefante feito de metal de coloração verde a nível perdido, esse que pode ser usado como defesa para proteger seu criador ou atacando os alvos com uma grande tromba, sendo como uma invocação de suporte para lutar pelo mesmo, onde seu mestre pode ficar em seu interior o usando de modo defensivo e ofensivo! (Copperajah)",
+      },
+      {
+        title: "O plano",
+        description: "O plano é uma condição bem peculiar, sendo o real objetivo dos vilões dessa coleção, onde podem realizar qualquer coisa e meio para alcançar seu objetivo independente do quão cruel e surreal possa ser o caminho! Para o líder da Macro cosmos, o mundo precisa sobreviver independente do tempo que passe, energia acumulada e estocada sem ter medo do que poderia ocorrer ou o que poderia acontecer com ele mesmo, tudo isso por se preocupar com o mundo, mesmo que ninguém entenda o que está realmente fazendo e qual o seu motivo!",
+      },
+    ],
+  },
+  {
+    title: "Hakari",
+    description: [
+      "Ah os pactos, vindos das planícies da cachoeira, criados pelos lamentos dos monges e estudantes do local, criando uma energia negativa surreal, onde essa é chamada de energia amaldiçoada, feita como mencionado de sentimentos extremamente negativos do nosso mundo, algo que pode ser considerado o oposto completo do iluminismo, já que esse é obtido ao se livrar de sentimentos negativos, a energia amaldiçoada é o contrário, quanto mais sentimentos ruins como raiva, tristeza e afins, mais forte ela se torna! Essa energia é uma conversão de magia perdida, tendo então o mesmo nível dela devido à sua raridade e esquecimento! Onde o usuário, desde que siga suas restrições de sentimentos negativos, pode envolver seu corpo para maximizar seus golpes físicos e afins!",
+      "Um bônus dessa técnica é chamado de energia reversa, onde o usuário deixa de ter sentimentos negativos para criar uma energia positiva e assim conseguir curar e regenerar qualquer parte de seu corpo, porém no turno em que gerar essa energia positiva não se pode utilizar a energia amaldiçoada, tendo que escolher qual vai usar no turno em questão!",
+      "Agora sobre o pacto verde em si, permite ao usuário ter uma técnica inata chamada de Private Pure Love Train, sendo bem peculiar para se utilizar em conjunto com seu domínio, mas em resumo o usuário ativa uma máquina de pachinko onde o intuito é conseguir um jackpot onde precisa acertar o número 7 três vezes, para poder rodar a roleta o usuário precisa de algumas condições, sendo elas: acertar qualquer golpe em um inimigo, dar suporte a um aliado seja buff ou cura, e a cada pet ou invocação trazido pelo mesmo no cenário, assim aumentando suas chances de girar a roleta, caso consiga o jackpot de 3 números 7 alinhados o usuário consegue triplicar todos os seus atributos, nível, resistência e velocidade sendo um grande buff para o mesmo! Esse pacto não possui técnicas derivadas de sua técnica inata!",
+    ],
+    items: [
+      {
+        title: "Expansão de domínio: Aposta Mortal Ociosa",
+        description: "A técnica final dos pactos, sendo uma expansão que cria um espaço alternado no local levando todos na área para esse novo cenário! Gerando uma barreira que só pode ser destruída de fora! Caso duas expansões sejam usadas ao mesmo tempo, a de quem tiver o maior nível vai prevalecer! Porém, dentro dessa expansão, as habilidades em si possuem o acerto garantido, ou seja, magia de distância, sendo quase impossível de se escapar de ser atingido! Essa expansão só pode ser usada uma vez por luta, missão ou evento, ou caso o usuário pague metade de seu nível para se utilizar mais vezes, não podendo recobrar ou elevar o nível até o fim da luta, missão ou evento!",
+      },
+    ],
+  },
+  {
+    title: "Cavaleiro",
+    description: [
+      "O Cavaleiro é uma assombração da nova loja Drasnia, não sendo como os contos da vovó que possuem um conto e são invocados, sendo sim transformações para seu portador, são literalmente espíritos malignos que habitam o interior de seu usuário onde firmam um pacto para poderem trabalhar em equipe, as assombrações que formam tais pactos permitem que o usuário assuma a forma literalmente da assombração, desse modo se tornando um espírito maligno que tem a fraqueza padrão das assombrações sendo elas a magia sagrada! Quando transformado na assombração um desejo assassino toma o interior do portador, e no cenário de sua transformação o usuário deve matar ao menos um ser vivo, caso faça isso pode se manter na transformação por tempo indeterminado, caso saia do cenário sem matar alguém essa transformação se desfaz não podendo ser mais utilizada até o fim da luta, missão ou evento! O Cavaleiro em si se torna uma espécie, como o nome sugere, de um cavaleiro de armadura metálica cobrindo o corpo inteiro, segurando sempre uma lança longa e pesada feita de ori-calco negro! As habilidades do Cavaleiro são:",
+    ],
+    items: [
+      {
+        title: "Guardia Compagnia",
+        description: "O usuário pode manifestar 3 seres irmãos cavaleiros junto a si, onde podem realizar efeitos e estratégias diferentes, tendo a mesma resistência e velocidade base de seu usuário, o cavaleiro original! Enquanto utiliza os guardas como desejar pelo cenário invocados, o mesmo não pode ser sentido ou detectado por meios mortais deixando os guardas fazerem o trabalho por si!",
+      },
+      {
+        title: "Carrasco",
+        description: "Um dos guardas que o usuário cria, sendo magro e ao mesmo tempo alto, segurando uma foice grande e esverdeada, quando esse guarda trava um alvo da escolha de seu mestre, sua foice vai possuir magia de perfuração e sua velocidade vai dobrar com a atual de seu mestre, esse que em cada golpe desfere 10% de dano crítico nos alvos! Podendo destravar um alvo e travar em outro para gerar esses efeitos, porém somente uma vez por turno!",
+      },
+      {
+        title: "Assassino",
+        description: "Um dos guardas que o usuário cria, esse sendo menor e com um manto ao redor de seu corpo escondendo suas vestes metálicas mais finas, parecendo rápido porém não devemos confundir, tal ser pode atravessar qualquer coisa sólida independente se é mágica ou não, podendo se ocultar e ficar de modo ladino podendo caminhar pelo cenário mais tranquilo, tal guarda carrega um par de adagas com a mesma resistência de seu usuário, além de poder carregar os itens e armas de seu usuário para poder utilizar de pontos diferentes do cenário!",
+      },
+      {
+        title: "Executor",
+        description: "Um dos guardas que o usuário cria, sendo esse bem mais parrudo com uma máscara negra em farrapos costurados, carregando uma lança pontuda feita de ori-calco negro, sendo o maior dos guardas criados, sua habilidade em si é bloquear qualquer golpe físico, assim tankando poderes brutos que vierem contra si, podendo desse modo defender um local escolhido pelo cavaleiro, ou sempre ficar perto do seu criador para o defender de ataques ou de quem chegar perto do mesmo!",
+      },
+      {
+        title: "Forged In Fog",
+        description: "Sendo uma passiva peculiar dessas assombrações, quando invocadas e transformadas no primeiro cenário de sua escolha, ele ganha uma mudança visual que dura enquanto tiver alguém nele! Falando sobre o cenário do Cavaleiro, o local ganha um aspecto de um castelo em ruínas, onde a luz da lua entra pelos buracos que estão espalhados pelo teto e paredes, tendo lustres e luminárias por todo o local, um cheiro ruim e de poeira espalhados pelo local, nisso o som constante de passos pesados e metálicos pelo terreno! Nele nada de anormal ocorre, podendo viver e agir normalmente, porém com um efeito: os que estiverem nesse cenário somente poderão utilizar uma arma branca e uma armadura se tiverem, não podendo utilizar nenhuma outra enquanto estiverem no local, assim tendo que ter uma luta de cavaleiros entre o usuário e seus inimigos, afetando claramente aliados e inimigos, os guardas podem ser utilizados normalmente!",
+      },
+    ],
+  },
+  {
+    title: "Kaiju",
+    description: [
+      "Um dos Kaijus da nova loja Drasnia, sendo algo bem diferente do habitual, poderes biológicos de titãs que viveram há muito tempo no nosso mundo, como uma raça ancestral e perdida, com esse poder o usuário ganha uma espécie de traje que cobre o corpo inteiro, dando uma sobrepele diferente do habitual, sendo com a resistência de ori-calco negro com cobre enegrecido o deixando duro na queda para golpes físicos! Essa transformação desse traje funciona de um modo curioso, liberando 10% do poder total por turno elevando sua Fortitude, em 10 turnos o mesmo libera 100% dessa força, para cada 10% dessa Fortitude a velocidade do usuário dobra e sua força física aumenta, onde com todo o poder liberado essa força se torna infinita e sua velocidade é elevada à décima potência do valor máximo!",
+      "Sobre esse Kaiju em si, sendo ele o Número 04, é um traje de combate especial que tem textura mais delicada, ressaltando alguns detalhes ao redor da cintura lembrando uma saia ou protetor para aquela região, sua face possui vários olhos como um inseto ou parasita podendo dar uma melhor visão para seu usuário, possui asas de insetos em suas costas podendo voar livremente pelo ar com grande velocidade levando a luta para o céu caso queira, esse Kaiju pode criar de seu corpo um grande machado de duas mãos com a mesma resistência de seu corpo para lutar em curtas distâncias!",
+      "O Kaiju N° 04 pode gerar ar a nível místico conseguindo lançar cortes de seu machado contra os alvos ou apenas maximizar os cortes a curta distância contra os mesmos, isso até o mesmo atingir a Fortitude de 50%, desse ponto em diante o Número 04 consegue produzir agora fogo juntamente com o ar que já produzia enquanto mescla os dois os fazendo se expandir contra os alvos, assim sendo um golpe combinado de fogo e ar, assim que um corte é feito o local cortado explode causando dano de dentro para fora dos alvos sendo um ataque explosivo! Consegue voar agora com suas asas com o dobro de sua velocidade atual! Logo por isso o núcleo do N° 04 está localizado entre suas asas de inseto no centro de suas costas para ser mais exato!",
+      "Esse Kaiju ainda pode, depois de atingir a Fortitude em 50%, criar de seu corpo Kaijus menores, esses sendo uma espécie de insetos como moscas com asas grandes e presas afiadas igual seu criador, possuindo resistência de ori-calco azul e tendo o efeito de contador, ou seja um nível 1.000 pode criar 1.000 desses pequenos seres, controlando-os como desejar, quando destruídos eles explodem liberando uma destruição de ar com fogo místico!",
+    ],
+  },
+  {
+    title: "Crepúsculo",
+    description: [
+      "Sendo um dos purificados da nova loja Drasnia, entidades obscuras retiradas diretamente do inferno, onde por meio de magia de ritual, há muitos anos na academia Don Dondoria, foram purificados, se tornando paladinos, os compradores desses itens são possuídos por eles ganhando um tom de pele mais claro e ao mesmo tempo algumas marcas negras pelo corpo, principalmente no rosto por debaixo dos olhos, apenas por ser hospedeiro de um desses purificados, o usuário ganha um par de asas grandes e brancas, podendo voar por meio delas, e ganha algumas habilidades biológicas, no caso o purificado feral permite ao usuário usar magias de luz e sombras sendo elas:",
+    ],
+    items: [
+      {
+        title: "Feixe de luz",
+        description: "O usuário canaliza magia de luz a nível místico ao redor de seu corpo, e então uma estrela brilha onde uma rajada em linha reta avança contra os alvos, sendo um feixe grande e poderoso, quando atinge o local gera uma explosão grande capaz de destruir meio distrito com ela, a mesma possui magia de perfuração sendo assim ignora defesas as atravessando até acertar o alvo sendo extremamente perigosa e de difícil esquiva!",
+      },
+      {
+        title: "Absorção gravitacional",
+        description: "Manipulando magia de sombras a nível místico, o usuário cria uma onda negra à frente de seu corpo como uma nuvem escura, ela possui uma distorção gravitacional gigante, capaz de afetar os arredores deixando tudo mais pesado, porém ela funciona como um pequeno buraco negro, absorvendo qualquer magia de nível mortal que venha na direção dela seja de inimigos ou aliados as absorvendo aos poucos até ser completamente absorvida e anulada!",
+      },
+      {
+        title: "Corte do crepúsculo",
+        description: "Nessa habilidade o usuário cria uma esfera de luz e uma de sombras em seus lados, sendo ambos ao nível místico, então gera uma dupla rajada de ambos os elementos que se unem virando magia de crepúsculo a nível místico os fazendo se tornar magia fusionada a nível místico, algo extremamente raro, essas rajadas unidas se estouram criando lâminas que avançam até os alvos, sendo feitas de crepúsculo, tais cortes funcionam com efeito de contador, ou seja se o usuário for nível 3.000 ele lança 3.000 cortes de magia de crepúsculo a nível místico contra seus alvos podendo abalar um cenário!",
+      },
+    ],
+  },
+  {
+    title: "Cardeal Central",
+    description: [
+      "O segundo rei de Extalia, cuja alcunha era Arthur, tinha a fama de ser o Hunter mais forte de todos não só por seu poder e sim por sua inteligência, muitas das magias e utensílios que temos vieram da mente desse homem, quem inspirou Sedah a usar de sua criatividade foi tal ser! O único homem que conseguia usar as 5 magias proibidas: tempo, probabilidade, fama, mundo e destino, isso em conjunto com as 5 magias ancestrais: distância, ritual, sentimentos, caça e necromancia! Entendem o motivo de seu real poder? Além disso o mesmo soube entender as mesmas, como um lado da mesma moeda, descobrindo que uma proibida existia em harmonia com uma ancestral sendo sua cara-metade, então criou sua própria habilidade, a rosa dos ventos, um poder ocular único onde a famosa rosa dos ventos era centralizada com 5 pontas, uma ao centro, uma ao norte, uma ao sul, uma ao leste e outra ao oeste! Em ambos os olhos é claro, lhe fazendo compreender seu poder melhor!",
+      "O Cardeal Central nada mais é que um fragmento desse poder ocular, onde o usuário ganha em seus olhos uma ponta como um cristal centralizado, no olho direito estaria um cristal alaranjado, no esquerdo um cristal turquesa! Representantes da probabilidade e do ritual, o usuário, além de poder ver tais magias mesmo se elas se ocultarem em seu plano, fica imune a essas duas perigosas magias, então nem mesmo probabilidade ou rituais podem ferir o portador do Cardeal Central! Por ser um item biológico, prata enegrecida se torna um perigo ao usuário, mas fora isso os olhos lhe dão uma vantagem contra itens perigosos, além de terem uma passiva que impede cegueira!",
+    ],
+  },
+  {
+    title: "Jingoro",
+    description: [
+      "Um dos estilos ninjas da loja Drasnia, sendo habilidades dos mais variados tipos como biológicas, armas, magias peculiares, essa no caso sendo o estilo Jingoro, esse dando para seu usuário um recipiente de vidro ou barro que ele carrega, dentro do mesmo sal é armazenado onde o usuário pode manipulá-lo como desejar seja para atacar ou se defender! Além de possuir algumas habilidades como por exemplo:",
+    ],
+    items: [
+      {
+        title: "Tandojutsu",
+        description: "O usuário pode passar sal no corpo dos alvos absorvendo o líquido dele, quanto mais sal cair sobre o corpo do alvo mais líquido pode absorver, para cada nível de diferença do usuário para o alvo usamos um turno equivalente a 1.000 níveis, então se o usuário for nível 3.000 e o alvo for nível 5.000, enquanto estiver com o sal no corpo o alvo demora 2 turnos para ser completamente seco e posteriormente morto por desidratação!",
+      },
+      {
+        title: "Dissolução",
+        description: "O usuário volta a manipular o sal, porém dessa vez no corpo dele mesmo, onde o deixa desnutrido e ao mesmo tempo viscoso, permitindo que possa passar por qualquer abertura sem dificuldades como se fosse uma lagarta ou animal invertebrado!",
+      },
+      {
+        title: "Homem salgado",
+        description: "A última habilidade desse estilo, o usuário com sal pelo corpo, ao tocar um inimigo que tenha alguma fétida exposta ou até mesmo em sua boca, pode se comprimir e entrar dentro do local tocado, seu corpo absorve os líquidos o refazendo ao estado original e nisso acabando por destruir o alvo crescendo dentro dele!",
+      },
+    ],
+  },
+  {
+    title: "Potes coloridos",
+    description: [
+      "Os Potes são comprados por Jace, ao serem abertos pode se ver um líquido gasoso como se fosse refrigerante, pode ser bebido recuperando a fadiga do usuário! Mas esperem... algo estava dentro do pote em meio ao líquido... uma pequena esfera que se desmancha... logo uma energia acerta os olhos do comprador os dando muita dor porém mudando esses!",
+    ],
+    items: [
+      {
+        title: "Pote roxo: Rinnegan (Modelo pain)",
+        description: "O olho direito do usuário agora se torna roxo com várias espirais, cobrindo todo o olho! Esse pode ver a magia fluindo no corpo dos alvos e locais, assim podendo localizá-los mesmo escondidos! O usuário também pode criar estacas de bazô imbuídas em ouro e prata enegrecido para assim anular a magia e a raça dos atingidos! Logo esse olho tem um ponto fraco: ilusões! O usuário perde a capacidade de se livrar de ilusões sozinho! Esse olho tem 3 habilidades, sendo essas:",
+      },
+      {
+        title: "Pote vermelho: Sharingan (Modelo Itachi)",
+        description: "O olho esquerdo do usuário se torna mais escuro com a pupila vermelha, esse pode ver o fluxo de magia dos alvos! O mesmo é evolutivo! A princípio tem apenas um ponto preto na pupila, com esse o usuário pode copiar golpes físicos que tenha visto com seu olho! Logo após, o olho ganha 2 pontos pretos na pupila, com esses o usuário pode copiar magias (de slots) que tenha visto! Por fim, esse ganha 3 pontos pretos na pupila e com esses o usuário pode criar ilusões naqueles de nível igual ou inferior que olharem em seu olho! Esse olho tem uma condição: se o usuário for menor de nível 3k precisa de um turno para cada ponto preto surgir! Um nível 3k já pode ativar os 3! E já pode ativar a última forma, o Mangekyo Sharingan; nesse olho os pontos se unem fazendo o olho lembrar uma estrela de três pontas! Com isso as ilusões do usuário ignoram nível, afetando todos que olharem seu olho! Além de vir com outras habilidades, sendo:",
+      },
+      {
+        title: "Pote colorido: RinneSharingan",
+        description: "O Pote é comprado por Jace, ao ser aberto pode se ver um líquido gasoso como se fosse refrigerante, pode ser bebido recuperando a fadiga do usuário! Mas esperem... algo estava dentro do pote em meio ao líquido... uma pequena esfera que se desmancha... logo uma energia acerta os olhos do comprador os dando muita dor porém mudando esses! O olho acaba por se abrir na testa do usuário, ele se torna mais escuro com a pupila vermelha, esse pode ver o fluxo de magia dos alvos! O mesmo é evolutivo! A princípio tem apenas um ponto preto na pupila, com esse o usuário pode copiar golpes físicos que tenha visto com seu olho! Logo após, o olho ganha 2 pontos pretos na pupila, com esses o usuário pode copiar magias (de slots) que tenha visto! Por fim, esse ganha 3 pontos pretos na pupila e com esses o usuário pode criar ilusões naqueles de nível igual ou inferior que olharem em seu olho! Esse olho tem uma condição: se o usuário for menor de nível 3k precisa de um turno para cada ponto preto surgir! Um nível 3k já pode ativar os 3, e já pode ativar a última forma, o Mangekyo Sharingan; nesse olho os pontos se unem fazendo o olho lembrar um Sharingan múltiplo, parecendo uma mistura desse com o Rinnegan! Com isso as ilusões do usuário ignoram nível, afetando todos que olharem seu olho! Além de vir com outras habilidades, sendo:",
+      },
+      {
+        title: "Rinnegan (Modelo pain)",
+        description: "O olho direito do usuário agora se torna roxo com várias espirais, cobrindo todo o olho! Esse pode ver a magia fluindo no corpo dos alvos e locais, assim podendo localizá-los mesmo escondidos! O usuário também pode criar estacas de bazô imbuídas em ouro e prata enegrecido para assim anular a magia e a raça dos atingidos! Logo esse olho tem um ponto fraco: ilusões! O usuário perde a capacidade de se livrar de ilusões sozinho! Esse olho tem 3 habilidades, sendo essas:",
+      },
+    ],
+  },
+  {
+    title: "Lua superior 7",
+    description: [
+      "As luas, também conhecidas como luas superiores, são frascos com sangue infectado de experiências do Sedah para criar seres poderosos! Ao ingerir, os usuários ganham um poder biológico grande como uma raça extra talvez! Podem se regenerar de golpes até mesmo caso percam membros, morrendo de fato somente se a cabeça for arrancada ou destruída! Porém são seres da noite, então no sol perdem seu poder de regeneração, sendo essa uma de suas fraquezas!",
+      "A lua superior 7, durante a noite, ganha uma pele mais acinzentada com um par de chifres em sua cabeça além de uma marca em sua testa! Essa por sua vez possui apenas uma, porém versátil, habilidade sendo ela:",
+    ],
+    items: [
+      {
+        title: "Clones superiores",
+        description: "O usuário pode dividir seu corpo criando vários clones que envolvem seus sentimentos! Os clones têm as mesmas características físicas e biológicas de seu original, porém não podem interagir com itens sendo como uma troca equivalente! Para cada clone feito o usuário precisa gastar 1.000 de seu nível até eles serem destruídos ou desfeitos!",
+      },
+      {
+        title: "Lua inferior 7 (bônus)",
+        description: "Um bônus das luas superiores para presentear outro personagem do usuário ou de outro player! Essa lua bônus segue todas as características da superior, porém possui apenas uma técnica! Essa é a lua inferior 7, a única lua exclusiva do sexo feminino, sua pele tem um tom mais claro sendo robusta além de longos cabelos brancos! E sua habilidade é:",
+      },
+    ],
+  },
+  {
+    title: "Selo Shikamaru",
+    description: [
+      "Ao absorver esta ponta da trindade, o felizardo recebe uma inteligência super avançada, podendo raciocinar e elaborar suas estratégias muito mais rápido do que qualquer outro! Este selo ainda concede um aumento de 10% em ganhos de xp e ouro em eventos, batalhas, serviços etc!",
+    ],
+    items: [
+      {
+        title: "Possessão da Sombra",
+        description: "O usuário manifesta suas próprias sombras com um nível místico e a lança de forma que ela se arraste pelo chão até a sombra de seu alvo! Caso ele acerte, ele irá conectar suas sombras, e então conseguiria controlar o azarado, transformando-o em uma marionete que responde às suas ações! Então, se o usuário tirar suas roupas, o inimigo também irá tirar. Vale dizer que não existe um limite de tempo para o controle, podendo controlar seu adversário o quanto desejar!",
+      },
+      {
+        title: "Multi Possessões das Sombras",
+        description: "O usuário manifesta sua possessão das sombras ainda em nível místico, mas agora estas se dividem e se levantam do chão com a forma de espinhos maleáveis ou chicotes, sendo uma boa técnica para quem gosta de torturar. Ela ainda segue o padrão da habilidade anterior, então, se ela acertar um alvo, este terá que realizar os mesmos movimentos do usuário!",
+      },
+      {
+        title: "Execução das Sombras",
+        description: "Caso o usuário consiga possuir o corpo de alguém com sua possessão de sombras, ele pode usar esta técnica, envolvendo o corpo da vítima com sombras, com uma mão na ponta, subindo até chegar em seu pescoço, o agarrando e enforcando até matar! Se a vítima não tiver uma defesa apropriada, ou força superior à do usuário da possessão, ela irá morrer no mesmo instante, mas se fosse em uma situação contrária, a pessoa conseguiria resistir por até um turno! Esta técnica só pode ser usada em um alvo por vez.",
+      },
+    ],
+  },
+  {
+    title: "Graça do Sol",
+    description: [
+      "Uma das quatro graças, essa de nome Sol! Usadas de forma ativa, são absorvidas por seu usuário e logo tornam-se parte de seu biológico. Ao ser ativada, o usuário ganha uma espécie de pentagrama em seu olho, além de um belo par de asas angelicais em suas costas, permitindo-o portanto voar. Contudo, sua habilidade é peculiar e única como o próprio sol: à medida que o sol brilha o poder do usuário aumenta! Porém, como a noção de tempo é abstrata aqui, usamos turnos! Então, a cada turno que passe, é como uma manhã nascendo, dobrando o nível base do mesmo até o meio-dia! Como exemplo:",
+      "1° Turno: 3k; 2° Turno: 6k; 3° Turno: 9k; 4° Turno: 12k; 5° Turno: 15k; 6° Turno: 18k; 7° Turno: 21k; 8° Turno: 24k; 9° Turno: 27k; 10° Turno: 30k; 11° Turno: 33k; 12° Turno: 36k.",
+      "Foi um exemplo claro: quanto mais forte o usuário, mais forte seu nível fica no turno 12! Esse ganha uma habilidade extra sendo essa:",
+    ],
+    items: [
+      {
+        title: "The One",
+        description: "No turno 12 o poder do sol fica tão intenso que seu poder solar místico (já sendo desde o princípio) o deixa com uma aura constante ao seu redor, e o usuário ganha o poder de estocar com o dedo indicador um alvo com esse sol lhe dando um golpe hitkill!",
+      },
+    ],
+  },
+  {
+    title: "Anel renegado azul",
+    description: [
+      "Um anel de um espírito renegado que viveu em uma dimensão paralela, ao ser posto no dedo de seu usuário o mesmo se torna parte permanente de seu corpo sendo um item biológico! Tal espírito renegado era uma fera predadora de seus alvos, um ser diferenciado, um pouco talvez; a principal habilidade do usuário é ter uma ligação muito grande com o elemento água, podendo o manipular livremente! Além de ter uma percepção mágica grande, pode absorver a magia do corpo de seus alvos com o toque, passando para si mesmo como uma reserva mágica! Essa possui algumas habilidades sendo elas:",
+    ],
+    items: [
+      {
+        title: "Grande impacto d'água",
+        description: "O usuário infla as bochechas produzindo uma enorme quantidade de água que sai como rajada no solo, seu nível é místico e sua função é fazer o cenário todo ficar inundado, ou melhor, deixar o campo literalmente em um oceano!",
+      },
+      {
+        title: "Tubarões furiosos",
+        description: "O usuário bate as mãos na água liberando uma pequena pressão d'água de seus dedos, cada dedo produz um tubarão de água mística totalizando 10 feras d'água que vão contra seus alvos como mísseis, esses têm o dobro da velocidade de patente do usuário e se explodem ao atingir o alvo!",
+      },
+      {
+        title: "Prisão d'água",
+        description: "O usuário, caso toque alguém fisicamente, pode liberar água de seu próprio corpo criando um domo d'água ao redor do atingido fazendo essa água imobilizar o físico do alvo além de anular suas habilidades biológicas! Nessa prisão o único modo de a destruir é de fora, e seu nível é místico!",
+      },
+      {
+        title: "Onda dos múltiplos tubarões",
+        description: "O usuário bate as mãos na água criando uma onda gigantesca de água mística contra os alvos, e nessa onda, ou melhor, tsunami, um tubarão d'água também a nível místico é criado sendo um para cada nível do usuário, então um nível 1.000 pode criar 1.000 tubarões d'água com a mesma habilidade da técnica tubarões furiosos!",
+      },
+      {
+        title: "Biju sem cauda",
+        description: "Não se deve usar tal habilidade caso não deseje, pois suas ações são irreversíveis; ao aceitar ir até o fim da arte do anel renegado, o usuário se torna um com sua água, ou seja, o mesmo ganha um tom de pele azulado, guelras em seu pescoço, dentes afiados como de tubarões, um literalmente homem-peixe! Assim pode respirar debaixo d'água e nadar com o dobro de sua velocidade atual! Além de poder absorver a magia do ambiente e dos alvos para si, ficando ainda mais perigoso com outras habilidades sendo elas:",
+      },
+    ],
+  },
+  {
+    title: "The Antítese",
+    description: [
+      "Uma das Schrift criadas pelo segundo rei para seu grupo seleto de soldados, são letras que se fundem à alma de seu portador lhe dando poderes únicos, são habilidades biológicas então possuem as mesmas fraquezas desses poderes! Sobre a letra A, The Antítese, seu poder é inverter a causa e efeito sobre dois seres, sendo o usuário ou não; assim pode escolher alguém bem ferido e outra pessoa em seu 100%, o usuário pode simplesmente inverter isso entre os dois deixando o ferido em seu 100% e o que antes estava em seu 100% agora com as feridas do outro! Isso funciona para trocar buffs e debuffs entre dois seres também, podendo sempre sair no lucro se um inimigo se buffar demais! Porém só se pode ativar essa letra uma vez por alvo, então não se pode repetir alvo até o final da luta, missão ou evento!",
+    ],
+    items: [
+      {
+        title: "Vollstandig",
+        description: "Vollstandig é o poder final de uma letra, a Schrift libera seu poder aumentando o poder mágico do usuário, assim ganhando ligeiras ou drásticas mudanças em sua aparência, outro fator é dobrar a velocidade atual do usuário; para se ativar uma Vollstandig o usuário precisa ter, no mínimo, usado o poder de sua letra uma vez na luta, missão ou evento! No caso da The Antítese, o usuário ganha uma luva branca e negra em sua destra onde um arco em formato de cruz feito de pura magia mística surge, e em suas costas um par de asas angelicais feitas dessa mesma magia também se cria, mostrando ser algo sagrado!",
+      },
+    ],
+  },
+  {
+    title: "Doutor Estranho",
+    description: [
+      "Um dos poderes da coleção de vingadores, essa sendo uma habilidade completamente biológica, foram criadas pelo atual capitão e líder do departamento de pesquisa e desenvolvimento, Z, feito com o propósito de criar armas melhores para o reino; sobre o poder Doutor Estranho, passivamente o usuário fica imune a prisões de cenário e a habilidades de magias do tempo, não podendo ser afetado por qualquer meio desses citados anteriormente! Agora sobre as habilidades do poder Doutor Estranho, são:",
+    ],
+    items: [
+      {
+        title: "Dimensão espelhada",
+        description: "Uma habilidade peculiar, o usuário cria uma dimensão alternativa levando todos para uma réplica do cenário atual onde estavam antes da ativação dessa habilidade; essa réplica é uma área isolada onde os que estiverem lá dentro não podem interferir do lado de fora, assim como do contrário! Por ser uma réplica, a destruição que ocorrer lá dentro não pode afetar do lado de fora, então é um modo de se prender os lutadores para preservar o cenário original, principalmente de golpes que têm um alto poder destrutivo!",
+      },
+      {
+        title: "Volta tempo",
+        description: "Uma vez por cenário o usuário pode manifestar magia do tempo no cenário todo fazendo-o voltar um turno em seu estado, como magia modesta; então, caso o cenário seja destruído, pode trazê-lo de volta como estava um turno anteriormente! Isso se aplica a magias de uso único utilizadas no turno anterior e até a aliados e inimigos mortos, sendo um meio de resolver problemas e situações complicadas!",
+      },
+      {
+        title: "Eu vim barganhar",
+        description: "A habilidade final desse poder, o usuário pode fazer uma barganha com entidades superiores; uma vez por turno pode fazer uma oferenda de algo para obter algo oposto, por exemplo sacrificar uma espada de gelo para se obter uma lança de fogo (resistência, elemento e afins podem ser alterados conforme a necessidade da barganha), podendo fazer com itens, pets, invocações e afins, deixando o mesmo sempre preparado no combate! Porém, como é uma barganha, o item ou coisa trocada na barganha não pode ser usado novamente na luta, missão ou evento! Deixando equilibrada a vasta capacidade de meios durante a luta!",
+      },
+    ],
+  },
+  {
+    title: "Escama de dragão",
+    description: [
+      "Uma das armas de Runeterra, vindas de um lugar distante, escavadas e descobertas por Sedah em suas aventuras! Sendo essa arma uma das armas biológicas disponíveis nessa coleção, passivamente essa arma dá a seu usuário escamas como as de um dragão e magia dracônica em seus golpes biológicos, tendo o mesmo efeito de tal magia! Suas habilidades são:",
+    ],
+    items: [
+      {
+        title: "Garras do dragão",
+        description: "O usuário canaliza magia dracônica em seus punhos podendo dar golpes imbuídos com a mesma, essa magia não possui um elemento sendo dracônica pura!",
+      },
+      {
+        title: "Em brasas",
+        description: "O usuário produz magia mística pura em seu corpo criando um pequeno tornado ao seu redor tendo um tamanho de um metro, assim ferindo os que se aproximem!",
+      },
+      {
+        title: "Bafo de dragão",
+        description: "O usuário canaliza magia mística pura em sua boca lançando assim uma baforada dessa contra os alvos!",
+      },
+      {
+        title: "Como dragão",
+        description: "O real poder dessa arma, permite ao usuário se tornar literalmente um dragão (raça), tendo que escolher seu elemento fixo para produzir e ser imune! Para se manter nessa forma é necessário acumular sua fúria, então ganha um turno de transformação para cada turno sem se transformar, ou seja, se estiver em um cenário por 5 turnos, ao se transformar pode manter sua forma por 5 turnos! E nessa forma também bufa as habilidades anteriores:",
+      },
+    ],
+  },
+  {
+    title: "Cemedine",
+    description: [
+      "Uma das individualidades da loja Drasnia criadas por Sedah como projeto para seus homúnculos, são lágrimas onde, ao absorver, o usuário ganha poderes biológicos impressionantes, porém com as mesmas fraquezas de qualquer poder biológico.",
+      "Cemedine é uma individualidade bem peculiar, permite ao usuário lançar de sua boca uma substância pegajosa como cola, é branca e densa podendo ser facilmente confundida com outra coisa, as propriedades dessa individualidade são de cobre enegrecido e prata enegrecida, permitindo assim que o usuário lance rajadas de cola contra os alvos para grudá-los e prendê-los, pelas propriedades da cola o usuário anula a força física e as habilidades biológicas dos alvos que pegar com ela, além de poder controlar a quantidade e velocidade da cola que lançar, podendo lançar várias rajadas de uma só vez ou uma única constante, assim controlando quando a cola vai secar para endurecer e ficar sólida!",
+    ],
+  },
+]
