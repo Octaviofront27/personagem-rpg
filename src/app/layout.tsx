@@ -17,6 +17,10 @@ const montserrat = Montserrat({
 export const viewport: Viewport = {
   width: 'device-width',
   initialScale: 1,
+  // Deixa a pagina pintar sob o notch; o header/menu se afastam dele com env(safe-area-inset-*)
+  viewportFit: 'cover',
+  // Barra de status/chrome do navegador na cor do cabecalho, que e escuro fixo nos dois temas
+  themeColor: '#060605',
 }
 
 export const metadata: Metadata = {

@@ -1,17 +1,32 @@
 'use client'
 
+import { useRef } from 'react'
 import { useTheme } from 'next-themes'
+
+// Um pouco mais que os 250ms das transicoes em globals.css, ja que o next-themes so escreve o
+// data-theme num efeito logo depois do clique
+const THEME_TRANSITION_MS = 350
 
 export function ThemeToggle() {
   const { theme, setTheme } = useTheme()
+  const transitionTimeout = useRef<number | undefined>(undefined)
+
+  const toggleTheme = () => {
+    const root = document.documentElement
+
+    // .theme-transition liga, so durante a troca, as transicoes de cor da pagina inteira (ver
+    // globals.css). Quem prefere menos movimento recebe a troca instantanea.
+    if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+      root.classList.add('theme-transition')
+      window.clearTimeout(transitionTimeout.current)
+      transitionTimeout.current = window.setTimeout(() => root.classList.remove('theme-transition'), THEME_TRANSITION_MS)
+    }
+
+    setTheme(theme === 'night' ? 'day' : 'night')
+  }
 
   return (
-    <button
-      className="theme-toggle"
-      type="button"
-      aria-label="Alternar tema claro e escuro"
-      onClick={() => setTheme(theme === 'night' ? 'day' : 'night')}
-    >
+    <button className="theme-toggle" type="button" aria-label="Alternar tema claro e escuro" onClick={toggleTheme}>
       <svg
         className="icon-sun"
         xmlns="http://www.w3.org/2000/svg"

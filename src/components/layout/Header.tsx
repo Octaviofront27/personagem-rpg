@@ -21,7 +21,7 @@ interface HeaderProps {
 export function Header({ title, homeLink = true }: HeaderProps) {
   const pathname = usePathname()
   const logoIcon = (
-    <Image src="/img/icons8-dragão-50.png" alt="Dragon Head Logo" className="logo-img" width={40} height={40} priority />
+    <Image src="/img/logo-dragao.png" alt="Logo: dragão" className="logo-img" width={40} height={40} priority />
   )
 
   return (

@@ -16,8 +16,8 @@ export function useScrollProgress() {
 
     const updateProgress = () => {
       const scrollable = scrollContainer.scrollHeight - scrollContainer.clientHeight
-      const percent = scrollable > 0 ? (scrollContainer.scrollTop / scrollable) * 100 : 0
-      progressBar.style.width = `${percent}%`
+      const progress = scrollable > 0 ? scrollContainer.scrollTop / scrollable : 0
+      progressBar.style.transform = `scaleX(${progress})`
     }
 
     let ticking = false
